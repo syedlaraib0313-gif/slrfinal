@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SLR GRAPHICS — Modern Creative Design Studio</title>
   <meta name="description" content="SLR GRAPHICS is a premier creative design studio crafting modern visual identities, brand systems, advertising creatives, and digital experiences that make brands memorable.">
-  <meta name="theme-color" content="#0A0A0A">
+  <meta name="theme-color" content="#1B1035">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/slr-logo.png">
@@ -27,18 +27,14 @@
         extend: {
           colors: {
             brand: {
-              black: '#0A0A0A',
-              nearBlack: '#111111',
-              card: '#161616',
-              cardHover: '#1D1D1D',
-              border: 'rgba(255, 255, 255, 0.08)',
-              borderHover: 'rgba(255, 85, 0, 0.45)',
-              orange: '#FF5500',
-              orangeHover: '#FF6A1A',
-              orangeMuted: 'rgba(255, 85, 0, 0.12)',
-              orangeGlow: 'rgba(255, 85, 0, 0.35)',
-              muted: '#8E8E93',
-              light: '#F5F5F7'
+              white: '#FFFFFF',
+              dark: '#1B1035',
+              violet: '#7C3AED',
+              bright: '#A855F7',
+              bgLight: '#FAF9FD',
+              cardBorder: '#1B1035',
+              muted: '#655B7C',
+              softBorder: 'rgba(27, 16, 53, 0.15)'
             }
           },
           fontFamily: {
@@ -54,74 +50,73 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-brand-black text-slate-300 font-sans selection:bg-brand-orange selection:text-white antialiased overflow-x-hidden">
+<body class="bg-brand-white text-brand-dark font-sans selection:bg-brand-violet selection:text-white antialiased overflow-x-hidden">
 
-  <!-- Subtle Ambient Glow Effects -->
+  <!-- Background Subtle Violet Ambient Blurs -->
   <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-    <div class="absolute -top-40 right-1/4 w-96 h-96 md:w-[600px] md:h-[600px] bg-brand-orange/10 rounded-full blur-[160px] animate-pulse-slow"></div>
-    <div class="absolute top-1/2 -left-40 w-80 h-80 md:w-[500px] md:h-[500px] bg-brand-orange/5 rounded-full blur-[150px]"></div>
-    <div class="absolute bottom-10 right-10 w-96 h-96 bg-brand-orange/8 rounded-full blur-[170px]"></div>
-    <div class="absolute inset-0 bg-noise opacity-[0.03]"></div>
+    <div class="absolute -top-32 right-1/4 w-96 h-96 md:w-[600px] md:h-[600px] bg-brand-violet/5 rounded-full blur-[140px]"></div>
+    <div class="absolute top-1/2 -left-32 w-80 h-80 md:w-[500px] md:h-[500px] bg-brand-bright/5 rounded-full blur-[140px]"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 bg-brand-dark/5 rounded-full blur-[160px]"></div>
   </div>
 
-  <!-- STICKY MAIN NAVIGATION (ONLY 5 MAIN SECTIONS) -->
-  <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-brand-black/90 backdrop-blur-md border-b border-brand-border">
+  <!-- STICKY MAIN NAVIGATION (5 CORE SECTIONS) -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-brand-softBorder shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
       <!-- Brand Logo & Name -->
-      <a href="#home" class="flex items-center gap-3.5 group">
-        <div class="w-10 h-10 rounded-xl bg-brand-nearBlack border border-brand-border group-hover:border-brand-orange transition-all p-1.5 flex items-center justify-center shadow-[0_0_15px_rgba(255,85,0,0.1)]">
+      <a href="#home" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-brand-dark border border-brand-dark group-hover:border-brand-violet transition-all p-1.5 flex items-center justify-center shadow-md">
           <img src="assets/slr-logo.png" alt="SLR GRAPHICS" class="w-full h-full object-contain">
         </div>
         <div class="flex flex-col">
-          <span class="font-display font-extrabold text-lg sm:text-xl tracking-wider text-white">
-            SLR <span class="text-brand-orange">GRAPHICS</span>
+          <span class="font-display font-extrabold text-lg sm:text-xl tracking-wider text-brand-dark">
+            SLR <span class="text-brand-violet">GRAPHICS</span>
           </span>
-          <span class="text-[9px] tracking-[0.22em] text-brand-muted uppercase font-medium">Design Studio</span>
+          <span class="text-[9px] tracking-[0.22em] text-brand-muted uppercase font-semibold">Design Studio</span>
         </div>
       </a>
 
-      <!-- Desktop Navigation Links: EXACTLY 5 SECTIONS -->
+      <!-- Desktop Navigation Links: 5 SECTIONS -->
       <nav class="hidden md:flex items-center gap-1 lg:gap-2">
-        <a href="#home" class="nav-link px-4 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-lg transition-colors">Home</a>
-        <a href="#services" class="nav-link px-4 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-lg transition-colors">Services</a>
-        <a href="#portfolio" class="nav-link px-4 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-lg transition-colors">Portfolio</a>
-        <a href="#about" class="nav-link px-4 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-lg transition-colors">About</a>
-        <a href="#contact" class="nav-link px-4 py-2 text-sm font-medium text-slate-300 hover:text-white rounded-lg transition-colors">Contact</a>
+        <a href="#home" class="nav-link px-4 py-2 text-sm font-semibold text-brand-dark hover:text-brand-violet rounded-lg transition-colors">Home</a>
+        <a href="#services" class="nav-link px-4 py-2 text-sm font-semibold text-brand-dark hover:text-brand-violet rounded-lg transition-colors">Services</a>
+        <a href="#portfolio" class="nav-link px-4 py-2 text-sm font-semibold text-brand-dark hover:text-brand-violet rounded-lg transition-colors">Portfolio</a>
+        <a href="#about" class="nav-link px-4 py-2 text-sm font-semibold text-brand-dark hover:text-brand-violet rounded-lg transition-colors">About</a>
+        <a href="#contact" class="nav-link px-4 py-2 text-sm font-semibold text-brand-dark hover:text-brand-violet rounded-lg transition-colors">Contact</a>
       </nav>
 
-      <!-- Prominent Orange CTA Button -->
+      <!-- Prominent Violet CTA Button -->
       <div class="hidden md:flex items-center gap-4">
-        <a href="https://wa.me/917004953962" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full text-slate-400 hover:text-white hover:bg-white/5 border border-white/5 transition-colors" title="Chat on WhatsApp">
-          <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+        <a href="https://wa.me/917004953962" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full text-brand-muted hover:text-brand-dark hover:bg-brand-dark/5 border border-brand-softBorder transition-colors" title="Chat on WhatsApp">
+          <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
         </a>
-        <a href="#contact" class="px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold tracking-wider text-black bg-brand-orange hover:bg-brand-orangeHover transition-all duration-300 shadow-[0_0_20px_rgba(255,85,0,0.35)] hover:shadow-[0_0_30px_rgba(255,85,0,0.6)] hover:-translate-y-0.5 inline-flex items-center gap-2">
+        <a href="#contact" class="px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold tracking-wider text-white bg-brand-violet hover:bg-brand-bright transition-all duration-300 shadow-[0_4px_16px_rgba(124,58,237,0.3)] hover:shadow-[0_6px_22px_rgba(168,85,247,0.5)] hover:-translate-y-0.5 inline-flex items-center gap-2">
           <span>START A PROJECT</span>
           <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
         </a>
       </div>
 
       <!-- Mobile Hamburger Button -->
-      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 focus:outline-none" aria-label="Toggle Navigation Menu">
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-brand-dark hover:bg-brand-dark/5 focus:outline-none" aria-label="Toggle Navigation Menu">
         <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
         <i data-lucide="x" id="close-icon" class="w-6 h-6 hidden"></i>
       </button>
     </div>
 
     <!-- Mobile Drawer Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-brand-nearBlack/95 border-b border-brand-border px-6 py-6 backdrop-blur-xl">
-      <div class="flex flex-col gap-4">
-        <a href="#home" class="mobile-nav-link text-base font-semibold text-slate-200 hover:text-brand-orange py-2 border-b border-white/5">Home</a>
-        <a href="#services" class="mobile-nav-link text-base font-semibold text-slate-200 hover:text-brand-orange py-2 border-b border-white/5">Services</a>
-        <a href="#portfolio" class="mobile-nav-link text-base font-semibold text-slate-200 hover:text-brand-orange py-2 border-b border-white/5">Portfolio</a>
-        <a href="#about" class="mobile-nav-link text-base font-semibold text-slate-200 hover:text-brand-orange py-2 border-b border-white/5">About</a>
-        <a href="#contact" class="mobile-nav-link text-base font-semibold text-slate-200 hover:text-brand-orange py-2 border-b border-white/5">Contact</a>
-        <div class="pt-2 flex flex-col gap-3">
-          <a href="#contact" class="mobile-nav-link text-center w-full py-3 rounded-xl font-bold text-sm tracking-wider text-black bg-brand-orange shadow-lg">
+    <div id="mobile-menu" class="hidden md:hidden bg-white/98 border-b border-brand-softBorder px-6 py-6 backdrop-blur-xl shadow-xl">
+      <div class="flex flex-col gap-3">
+        <a href="#home" class="mobile-nav-link text-base font-bold text-brand-dark hover:text-brand-violet py-2 border-b border-brand-softBorder/60">Home</a>
+        <a href="#services" class="mobile-nav-link text-base font-bold text-brand-dark hover:text-brand-violet py-2 border-b border-brand-softBorder/60">Services</a>
+        <a href="#portfolio" class="mobile-nav-link text-base font-bold text-brand-dark hover:text-brand-violet py-2 border-b border-brand-softBorder/60">Portfolio</a>
+        <a href="#about" class="mobile-nav-link text-base font-bold text-brand-dark hover:text-brand-violet py-2 border-b border-brand-softBorder/60">About</a>
+        <a href="#contact" class="mobile-nav-link text-base font-bold text-brand-dark hover:text-brand-violet py-2 border-b border-brand-softBorder/60">Contact</a>
+        <div class="pt-3 flex flex-col gap-2.5">
+          <a href="#contact" class="mobile-nav-link text-center w-full py-3 rounded-xl font-bold text-sm tracking-wider text-white bg-brand-violet shadow-md">
             START A PROJECT
           </a>
-          <a href="https://wa.me/917004953962" target="_blank" class="flex items-center justify-center gap-2 py-2.5 rounded-xl border border-brand-border text-slate-300 text-xs font-semibold">
-            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+          <a href="https://wa.me/917004953962" target="_blank" class="flex items-center justify-center gap-2 py-2.5 rounded-xl border border-brand-softBorder text-brand-dark text-xs font-semibold">
+            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
             WhatsApp (+91 7004953962)
           </a>
         </div>
@@ -134,42 +129,42 @@
     <!-- ========================================== -->
     <!-- 1. HOME SECTION                            -->
     <!-- ========================================== -->
-    <section id="home" class="min-h-[92vh] flex flex-col justify-center relative px-4 sm:px-6 lg:px-8 py-16 sm:py-24 overflow-hidden">
+    <section id="home" class="min-h-[88vh] flex flex-col justify-center relative px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
       <div class="max-w-7xl mx-auto w-full">
         
-        <!-- Hero Content Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center mb-16 sm:mb-20">
+        <!-- Hero Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center mb-12 sm:mb-16">
           
           <!-- Text Column -->
-          <div class="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-left">
+          <div class="lg:col-span-7 space-y-5 sm:space-y-7 text-center lg:text-left">
             
             <!-- Label above heading -->
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-nearBlack border border-brand-border text-xs font-mono tracking-widest text-brand-orange uppercase">
-              <span class="w-2 h-2 rounded-full bg-brand-orange animate-ping"></span>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-dark/5 border border-brand-softBorder text-xs font-mono tracking-widest text-brand-violet uppercase">
+              <span class="w-2 h-2 rounded-full bg-brand-violet animate-ping"></span>
               CREATIVE GRAPHIC DESIGN STUDIO
             </div>
 
             <!-- Main Heading -->
-            <h1 class="font-headline font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-white uppercase leading-[1.02]">
+            <h1 class="font-headline font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-brand-dark uppercase leading-[1.03]">
               CREATE. <br class="hidden sm:inline" />
               DESIGN. <br class="hidden sm:inline" />
-              <span class="text-brand-orange underline decoration-brand-orange/40 decoration-wavy">STAND OUT.</span>
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-violet to-brand-bright">STAND OUT.</span>
             </h1>
 
             <!-- Supporting Text -->
-            <p class="text-lg sm:text-xl text-slate-300 max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            <p class="text-base sm:text-xl text-brand-muted max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
               SLR GRAPHICS creates professional, modern and memorable visual identities for brands, businesses, creators and individuals.
             </p>
 
             <!-- Two CTA Buttons -->
-            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-              <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full text-sm font-bold tracking-wider text-black bg-brand-orange hover:bg-brand-orangeHover transition-all duration-300 shadow-[0_0_25px_rgba(255,85,0,0.4)] hover:shadow-[0_0_40px_rgba(255,85,0,0.65)] hover:-translate-y-1 inline-flex items-center justify-center gap-2.5">
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
+              <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full text-sm font-bold tracking-wider text-white bg-brand-violet hover:bg-brand-bright transition-all duration-300 shadow-[0_6px_20px_rgba(124,58,237,0.3)] hover:shadow-[0_8px_28px_rgba(168,85,247,0.5)] hover:-translate-y-0.5 inline-flex items-center justify-center gap-2.5">
                 <span>START A PROJECT</span>
                 <i data-lucide="arrow-right" class="w-4 h-4"></i>
               </a>
-              <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 rounded-full text-sm font-semibold tracking-wider text-white bg-brand-nearBlack hover:bg-brand-card border border-brand-border hover:border-brand-orange transition-all duration-300 inline-flex items-center justify-center gap-2">
+              <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 rounded-full text-sm font-semibold tracking-wider text-brand-dark bg-white hover:bg-brand-dark hover:text-white border border-brand-dark transition-all duration-300 inline-flex items-center justify-center gap-2 shadow-sm">
                 <span>VIEW PORTFOLIO</span>
-                <i data-lucide="arrow-down-right" class="w-4 h-4 text-brand-orange"></i>
+                <i data-lucide="arrow-down-right" class="w-4 h-4 text-brand-violet"></i>
               </a>
             </div>
 
@@ -177,34 +172,32 @@
 
           <!-- Creative Visual Showcase Column -->
           <div class="lg:col-span-5 relative">
-            <div class="relative mx-auto max-w-md lg:max-w-none rounded-3xl bg-gradient-to-b from-brand-card to-brand-nearBlack border border-brand-border p-6 sm:p-8 shadow-2xl overflow-hidden group">
+            <div class="relative mx-auto max-w-md lg:max-w-none rounded-[22px] bg-brand-dark text-white p-6 sm:p-8 shadow-2xl overflow-hidden group">
               <!-- Glow backdrops -->
-              <div class="absolute -top-20 -right-20 w-52 h-52 bg-brand-orange/20 rounded-full blur-3xl pointer-events-none"></div>
+              <div class="absolute -top-20 -right-20 w-52 h-52 bg-brand-violet/30 rounded-full blur-3xl pointer-events-none"></div>
               
-              <!-- Floating Brand Card Composition -->
               <div class="relative z-10 space-y-6">
-                <div class="flex items-center justify-between border-b border-white/5 pb-4">
+                <div class="flex items-center justify-between border-b border-white/10 pb-4">
                   <div class="flex items-center gap-2.5">
-                    <span class="w-3 h-3 rounded-full bg-brand-orange"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-brand-bright"></span>
                     <span class="text-xs font-mono uppercase text-slate-300 tracking-wider">SLR GRAPHICS // STUDIO</span>
                   </div>
-                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-orange/15 text-brand-orange uppercase">2026 EDITION</span>
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/10 text-brand-bright uppercase font-bold">2026 EDITION</span>
                 </div>
 
                 <!-- 3D Ribbon Logo Display Frame -->
-                <div class="h-64 sm:h-72 rounded-2xl bg-black/60 border border-white/5 flex items-center justify-center p-6 relative overflow-hidden group-hover:border-brand-orange/50 transition-colors">
-                  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,85,0,0.12),transparent_70%)]"></div>
-                  <img src="assets/slr-logo.png" alt="SLR Graphics 3D Emblem" class="max-h-48 w-auto object-contain filter drop-shadow-[0_10px_30px_rgba(255,85,0,0.3)] transition-transform duration-500 group-hover:scale-105">
+                <div class="h-60 sm:h-72 rounded-xl bg-black/40 border border-white/10 flex items-center justify-center p-6 relative overflow-hidden group-hover:border-brand-bright/60 transition-colors">
+                  <img src="assets/slr-logo.png" alt="SLR Graphics 3D Ribbon Logo" class="max-h-48 w-auto object-contain filter drop-shadow-[0_10px_25px_rgba(168,85,247,0.5)] transition-transform duration-500 group-hover:scale-105">
                 </div>
 
                 <!-- Studio Meta Row -->
                 <div class="grid grid-cols-2 gap-3 text-left">
-                  <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
-                    <span class="text-[10px] font-mono text-brand-muted uppercase block">Discipline</span>
+                  <div class="p-3.5 rounded-xl bg-white/5 border border-white/10">
+                    <span class="text-[10px] font-mono text-slate-400 uppercase block">Discipline</span>
                     <span class="text-xs font-bold text-white">Visual Identities</span>
                   </div>
-                  <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5">
-                    <span class="text-[10px] font-mono text-brand-muted uppercase block">Availability</span>
+                  <div class="p-3.5 rounded-xl bg-white/5 border border-white/10">
+                    <span class="text-[10px] font-mono text-slate-400 uppercase block">Availability</span>
                     <span class="text-xs font-bold text-emerald-400 flex items-center gap-1.5">
                       <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Taking Clients
                     </span>
@@ -217,35 +210,35 @@
         </div>
 
         <!-- Introduction Strip & Statistics -->
-        <div class="pt-10 border-t border-brand-border">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="pt-8 border-t border-brand-softBorder">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
             
             <div class="lg:col-span-7 space-y-2 text-center lg:text-left">
-              <h2 class="text-xl sm:text-2xl font-display font-bold text-white tracking-wide uppercase">
-                DESIGNING VISUALS. <span class="text-brand-orange">BUILDING IDENTITIES.</span>
+              <h2 class="text-xl sm:text-2xl font-display font-bold text-brand-dark tracking-wide uppercase">
+                DESIGNING VISUALS. <span class="text-brand-violet">BUILDING IDENTITIES.</span>
               </h2>
-              <p class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl">
+              <p class="text-brand-muted text-sm sm:text-base leading-relaxed max-w-2xl">
                 SLR GRAPHICS combines creativity, strategy, and visual consistency to create meaningful brand experiences that captivate audiences and elevate market perception.
               </p>
             </div>
 
             <!-- Features / Metrics Grid -->
-            <div class="lg:col-span-5 grid grid-cols-2 sm:grid-cols-4 gap-3">
-              <div class="p-4 rounded-2xl bg-brand-nearBlack border border-brand-border text-center">
-                <div class="text-xl sm:text-2xl font-black font-display text-white mb-0.5">100<span class="text-brand-orange">%</span></div>
-                <div class="text-[10px] font-mono text-brand-muted uppercase leading-tight">CUSTOM DESIGN</div>
+            <div class="lg:col-span-5 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
+              <div class="p-3.5 sm:p-4 rounded-[16px] bg-brand-bgLight border border-brand-softBorder text-center">
+                <div class="text-xl sm:text-2xl font-black font-display text-brand-dark mb-0.5">100<span class="text-brand-violet">%</span></div>
+                <div class="text-[9px] sm:text-[10px] font-mono text-brand-muted uppercase leading-tight font-semibold">CUSTOM DESIGN</div>
               </div>
-              <div class="p-4 rounded-2xl bg-brand-nearBlack border border-brand-border text-center">
-                <div class="text-xl sm:text-2xl font-black font-display text-white mb-0.5">9<span class="text-brand-orange">+</span></div>
-                <div class="text-[10px] font-mono text-brand-muted uppercase leading-tight">SERVICES</div>
+              <div class="p-3.5 sm:p-4 rounded-[16px] bg-brand-bgLight border border-brand-softBorder text-center">
+                <div class="text-xl sm:text-2xl font-black font-display text-brand-dark mb-0.5">9<span class="text-brand-violet">+</span></div>
+                <div class="text-[9px] sm:text-[10px] font-mono text-brand-muted uppercase leading-tight font-semibold">SERVICES</div>
               </div>
-              <div class="p-4 rounded-2xl bg-brand-nearBlack border border-brand-border text-center">
-                <div class="text-xl sm:text-2xl font-black font-display text-white mb-0.5">FOCUS</div>
-                <div class="text-[10px] font-mono text-brand-muted uppercase leading-tight">CLIENT DRIVEN</div>
+              <div class="p-3.5 sm:p-4 rounded-[16px] bg-brand-bgLight border border-brand-softBorder text-center">
+                <div class="text-xl sm:text-2xl font-black font-display text-brand-dark mb-0.5">FOCUS</div>
+                <div class="text-[9px] sm:text-[10px] font-mono text-brand-muted uppercase leading-tight font-semibold">CLIENT DRIVEN</div>
               </div>
-              <div class="p-4 rounded-2xl bg-brand-nearBlack border border-brand-border text-center">
-                <div class="text-xl sm:text-2xl font-black font-display text-white mb-0.5">PIXEL</div>
-                <div class="text-[10px] font-mono text-brand-muted uppercase leading-tight">PERFECT</div>
+              <div class="p-3.5 sm:p-4 rounded-[16px] bg-brand-bgLight border border-brand-softBorder text-center">
+                <div class="text-xl sm:text-2xl font-black font-display text-brand-dark mb-0.5">PIXEL</div>
+                <div class="text-[9px] sm:text-[10px] font-mono text-brand-muted uppercase leading-tight font-semibold">PERFECT</div>
               </div>
             </div>
 
@@ -256,186 +249,162 @@
     </section>
 
     <!-- ========================================== -->
-    <!-- 2. SERVICES SECTION                        -->
+    <!-- 2. SERVICES SECTION (3x2 GRID ON MOBILE)   -->
     <!-- ========================================== -->
-    <section id="services" class="py-24 relative px-4 sm:px-6 lg:px-8 border-t border-brand-border bg-brand-nearBlack/40">
+    <section id="services" class="py-16 sm:py-24 relative px-4 sm:px-6 lg:px-8 border-t border-brand-softBorder bg-brand-bgLight">
       <div class="max-w-7xl mx-auto">
         
         <!-- Section Header -->
-        <div class="max-w-3xl mb-16">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-nearBlack border border-brand-border text-xs font-mono uppercase text-brand-orange tracking-widest mb-4">
-            <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> WHAT WE DO
+        <div class="max-w-3xl mb-10 sm:mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-brand-softBorder text-xs font-mono uppercase text-brand-violet tracking-widest mb-3 shadow-sm font-semibold">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-violet"></span> WHAT WE DO
           </div>
-          <h2 class="text-3xl sm:text-5xl font-display font-black text-white uppercase tracking-tight mb-4">
-            WHAT WE <span class="text-brand-orange">DO.</span>
+          <h2 class="text-3xl sm:text-5xl font-display font-black text-brand-dark uppercase tracking-tight mb-3">
+            WHAT WE <span class="text-brand-violet">DO.</span>
           </h2>
-          <p class="text-slate-400 text-base sm:text-lg leading-relaxed">
-            Creative solutions built to make your brand look professional, consistent and memorable across digital and print touchpoints.
+          <p class="text-brand-muted text-sm sm:text-lg leading-relaxed">
+            Creative solutions built to make your brand look professional, consistent and memorable.
           </p>
         </div>
 
-        <!-- 6 Large Service Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <!-- EXACTLY 6 SERVICE CARDS: 3x2 ON MOBILE, 3-COL ON DESKTOP -->
+        <div class="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 lg:gap-8">
           
-          <!-- Service 01: Brand Identity -->
-          <div class="group relative rounded-3xl p-8 bg-brand-card border border-brand-border hover:border-brand-orange/60 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between shadow-lg">
+          <!-- Card 01: Brand Identity -->
+          <div class="service-card group p-2.5 sm:p-5 md:p-7 rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 flex flex-col justify-between">
             <div>
-              <div class="flex items-center justify-between mb-8">
-                <span class="text-2xl font-headline font-black text-brand-orange font-mono">01</span>
-                <div class="w-10 h-10 rounded-full bg-brand-orangeMuted border border-brand-orange/30 flex items-center justify-center text-brand-orange group-hover:bg-brand-orange group-hover:text-black transition-all">
-                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              <div class="flex items-center justify-between mb-1.5 sm:mb-4">
+                <span class="text-xs sm:text-base md:text-xl font-headline font-black text-brand-violet group-hover:text-brand-bright font-mono">01</span>
+                <div class="w-5 h-5 sm:w-8 sm:h-8 rounded-full bg-brand-violet/10 group-hover:bg-brand-bright group-hover:text-brand-dark text-brand-violet flex items-center justify-center transition-colors">
+                  <i data-lucide="fingerprint" class="w-3 h-3 sm:w-4 sm:h-4"></i>
                 </div>
               </div>
-              <h3 class="text-2xl font-bold font-display text-white mb-3">BRAND IDENTITY</h3>
-              <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                Complete visual systems engineered to reflect brand personality, build market credibility, and leave lasting impressions.
+              <h3 class="text-[11px] sm:text-base md:text-xl font-bold font-display text-brand-dark group-hover:text-white mb-1 leading-tight sm:leading-snug">
+                Brand Identity
+              </h3>
+              <p class="text-[9px] sm:text-xs md:text-sm text-brand-muted group-hover:text-slate-300 leading-tight sm:leading-relaxed">
+                Logos, visual identity, colors & typography.
               </p>
-              <ul class="text-xs text-slate-300 space-y-2.5 pt-4 border-t border-white/5 font-mono">
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Logo Design & Monograms</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Visual Identity Systems</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Color Palette & Typography</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Comprehensive Brand Guidelines</li>
-              </ul>
             </div>
-            <div class="pt-6 mt-6 border-t border-white/5">
-              <a href="#contact" class="text-xs font-bold uppercase tracking-wider text-slate-400 group-hover:text-brand-orange transition-colors inline-flex items-center gap-1.5">
-                Inquire Service <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-              </a>
+            <div class="hidden sm:block pt-3 mt-3 border-t border-brand-softBorder group-hover:border-white/10">
+              <span class="text-[10px] md:text-xs font-bold text-brand-violet group-hover:text-brand-bright inline-flex items-center gap-1">
+                Explore <i data-lucide="chevron-right" class="w-3 h-3"></i>
+              </span>
             </div>
           </div>
 
-          <!-- Service 02: Social Media Design -->
-          <div class="group relative rounded-3xl p-8 bg-brand-card border border-brand-border hover:border-brand-orange/60 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between shadow-lg">
+          <!-- Card 02: Social Media -->
+          <div class="service-card group p-2.5 sm:p-5 md:p-7 rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 flex flex-col justify-between">
             <div>
-              <div class="flex items-center justify-between mb-8">
-                <span class="text-2xl font-headline font-black text-brand-orange font-mono">02</span>
-                <div class="w-10 h-10 rounded-full bg-brand-orangeMuted border border-brand-orange/30 flex items-center justify-center text-brand-orange group-hover:bg-brand-orange group-hover:text-black transition-all">
-                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              <div class="flex items-center justify-between mb-1.5 sm:mb-4">
+                <span class="text-xs sm:text-base md:text-xl font-headline font-black text-brand-violet group-hover:text-brand-bright font-mono">02</span>
+                <div class="w-5 h-5 sm:w-8 sm:h-8 rounded-full bg-brand-violet/10 group-hover:bg-brand-bright group-hover:text-brand-dark text-brand-violet flex items-center justify-center transition-colors">
+                  <i data-lucide="share-2" class="w-3 h-3 sm:w-4 sm:h-4"></i>
                 </div>
               </div>
-              <h3 class="text-2xl font-bold font-display text-white mb-3">SOCIAL MEDIA DESIGN</h3>
-              <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                Scroll-stopping feed systems, carousels, and stories crafted to drive engagement and establish visual authority.
+              <h3 class="text-[11px] sm:text-base md:text-xl font-bold font-display text-brand-dark group-hover:text-white mb-1 leading-tight sm:leading-snug">
+                Social Media
+              </h3>
+              <p class="text-[9px] sm:text-xs md:text-sm text-brand-muted group-hover:text-slate-300 leading-tight sm:leading-relaxed">
+                Posts, carousels, stories & viral campaigns.
               </p>
-              <ul class="text-xs text-slate-300 space-y-2.5 pt-4 border-t border-white/5 font-mono">
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Instagram Posts & Carousels</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Stories & Motion Templates</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Facebook & LinkedIn Graphics</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Integrated Social Campaigns</li>
-              </ul>
             </div>
-            <div class="pt-6 mt-6 border-t border-white/5">
-              <a href="#contact" class="text-xs font-bold uppercase tracking-wider text-slate-400 group-hover:text-brand-orange transition-colors inline-flex items-center gap-1.5">
-                Inquire Service <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-              </a>
+            <div class="hidden sm:block pt-3 mt-3 border-t border-brand-softBorder group-hover:border-white/10">
+              <span class="text-[10px] md:text-xs font-bold text-brand-violet group-hover:text-brand-bright inline-flex items-center gap-1">
+                Explore <i data-lucide="chevron-right" class="w-3 h-3"></i>
+              </span>
             </div>
           </div>
 
-          <!-- Service 03: Marketing & Advertising -->
-          <div class="group relative rounded-3xl p-8 bg-brand-card border border-brand-border hover:border-brand-orange/60 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between shadow-lg">
+          <!-- Card 03: Advertising -->
+          <div class="service-card group p-2.5 sm:p-5 md:p-7 rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 flex flex-col justify-between">
             <div>
-              <div class="flex items-center justify-between mb-8">
-                <span class="text-2xl font-headline font-black text-brand-orange font-mono">03</span>
-                <div class="w-10 h-10 rounded-full bg-brand-orangeMuted border border-brand-orange/30 flex items-center justify-center text-brand-orange group-hover:bg-brand-orange group-hover:text-black transition-all">
-                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              <div class="flex items-center justify-between mb-1.5 sm:mb-4">
+                <span class="text-xs sm:text-base md:text-xl font-headline font-black text-brand-violet group-hover:text-brand-bright font-mono">03</span>
+                <div class="w-5 h-5 sm:w-8 sm:h-8 rounded-full bg-brand-violet/10 group-hover:bg-brand-bright group-hover:text-brand-dark text-brand-violet flex items-center justify-center transition-colors">
+                  <i data-lucide="megaphone" class="w-3 h-3 sm:w-4 sm:h-4"></i>
                 </div>
               </div>
-              <h3 class="text-2xl font-bold font-display text-white mb-3">MARKETING & ADVERTISING</h3>
-              <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                High-converting promotional designs and campaign materials formulated to capture audience attention and scale results.
+              <h3 class="text-[11px] sm:text-base md:text-xl font-bold font-display text-brand-dark group-hover:text-white mb-1 leading-tight sm:leading-snug">
+                Advertising
+              </h3>
+              <p class="text-[9px] sm:text-xs md:text-sm text-brand-muted group-hover:text-slate-300 leading-tight sm:leading-relaxed">
+                Ad creatives, promotional posters & banners.
               </p>
-              <ul class="text-xs text-slate-300 space-y-2.5 pt-4 border-t border-white/5 font-mono">
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Performance Ad Creatives</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Promotional Event Posters</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Full Campaign Visual Suites</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Digital Display Banners</li>
-              </ul>
             </div>
-            <div class="pt-6 mt-6 border-t border-white/5">
-              <a href="#contact" class="text-xs font-bold uppercase tracking-wider text-slate-400 group-hover:text-brand-orange transition-colors inline-flex items-center gap-1.5">
-                Inquire Service <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-              </a>
+            <div class="hidden sm:block pt-3 mt-3 border-t border-brand-softBorder group-hover:border-white/10">
+              <span class="text-[10px] md:text-xs font-bold text-brand-violet group-hover:text-brand-bright inline-flex items-center gap-1">
+                Explore <i data-lucide="chevron-right" class="w-3 h-3"></i>
+              </span>
             </div>
           </div>
 
-          <!-- Service 04: Print & Packaging -->
-          <div class="group relative rounded-3xl p-8 bg-brand-card border border-brand-border hover:border-brand-orange/60 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between shadow-lg">
+          <!-- Card 04: Print & Packaging -->
+          <div class="service-card group p-2.5 sm:p-5 md:p-7 rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 flex flex-col justify-between">
             <div>
-              <div class="flex items-center justify-between mb-8">
-                <span class="text-2xl font-headline font-black text-brand-orange font-mono">04</span>
-                <div class="w-10 h-10 rounded-full bg-brand-orangeMuted border border-brand-orange/30 flex items-center justify-center text-brand-orange group-hover:bg-brand-orange group-hover:text-black transition-all">
-                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              <div class="flex items-center justify-between mb-1.5 sm:mb-4">
+                <span class="text-xs sm:text-base md:text-xl font-headline font-black text-brand-violet group-hover:text-brand-bright font-mono">04</span>
+                <div class="w-5 h-5 sm:w-8 sm:h-8 rounded-full bg-brand-violet/10 group-hover:bg-brand-bright group-hover:text-brand-dark text-brand-violet flex items-center justify-center transition-colors">
+                  <i data-lucide="package" class="w-3 h-3 sm:w-4 sm:h-4"></i>
                 </div>
               </div>
-              <h3 class="text-2xl font-bold font-display text-white mb-3">PRINT & PACKAGING</h3>
-              <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                Tactile product packaging, print collateral, and bespoke unboxing experiences ready for flawless retail production.
+              <h3 class="text-[11px] sm:text-base md:text-xl font-bold font-display text-brand-dark group-hover:text-white mb-1 leading-tight sm:leading-snug">
+                Print & Pack
+              </h3>
+              <p class="text-[9px] sm:text-xs md:text-sm text-brand-muted group-hover:text-slate-300 leading-tight sm:leading-relaxed">
+                Brochures, boxes, cards, labels & menus.
               </p>
-              <ul class="text-xs text-slate-300 space-y-2.5 pt-4 border-t border-white/5 font-mono">
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Brochures, Flyers & Company Decks</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Executive Business Cards</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Product Boxes, Pouches & Packaging</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Custom Labels, Menus & Stationery</li>
-              </ul>
             </div>
-            <div class="pt-6 mt-6 border-t border-white/5">
-              <a href="#contact" class="text-xs font-bold uppercase tracking-wider text-slate-400 group-hover:text-brand-orange transition-colors inline-flex items-center gap-1.5">
-                Inquire Service <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-              </a>
+            <div class="hidden sm:block pt-3 mt-3 border-t border-brand-softBorder group-hover:border-white/10">
+              <span class="text-[10px] md:text-xs font-bold text-brand-violet group-hover:text-brand-bright inline-flex items-center gap-1">
+                Explore <i data-lucide="chevron-right" class="w-3 h-3"></i>
+              </span>
             </div>
           </div>
 
-          <!-- Service 05: UI/UX & Website Design -->
-          <div class="group relative rounded-3xl p-8 bg-brand-card border border-brand-border hover:border-brand-orange/60 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between shadow-lg">
+          <!-- Card 05: UI/UX & Web -->
+          <div class="service-card group p-2.5 sm:p-5 md:p-7 rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 flex flex-col justify-between">
             <div>
-              <div class="flex items-center justify-between mb-8">
-                <span class="text-2xl font-headline font-black text-brand-orange font-mono">05</span>
-                <div class="w-10 h-10 rounded-full bg-brand-orangeMuted border border-brand-orange/30 flex items-center justify-center text-brand-orange group-hover:bg-brand-orange group-hover:text-black transition-all">
-                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              <div class="flex items-center justify-between mb-1.5 sm:mb-4">
+                <span class="text-xs sm:text-base md:text-xl font-headline font-black text-brand-violet group-hover:text-brand-bright font-mono">05</span>
+                <div class="w-5 h-5 sm:w-8 sm:h-8 rounded-full bg-brand-violet/10 group-hover:bg-brand-bright group-hover:text-brand-dark text-brand-violet flex items-center justify-center transition-colors">
+                  <i data-lucide="layout" class="w-3 h-3 sm:w-4 sm:h-4"></i>
                 </div>
               </div>
-              <h3 class="text-2xl font-bold font-display text-white mb-3">UI/UX & WEBSITE DESIGN</h3>
-              <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                Modern, user-centric interfaces and responsive web layouts crafted to convert visitors into loyal customers.
+              <h3 class="text-[11px] sm:text-base md:text-xl font-bold font-display text-brand-dark group-hover:text-white mb-1 leading-tight sm:leading-snug">
+                UI/UX & Web
+              </h3>
+              <p class="text-[9px] sm:text-xs md:text-sm text-brand-muted group-hover:text-slate-300 leading-tight sm:leading-relaxed">
+                Web UI, landing pages & mobile interfaces.
               </p>
-              <ul class="text-xs text-slate-300 space-y-2.5 pt-4 border-t border-white/5 font-mono">
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Website UI Design & Systems</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> High-Conversion Landing Pages</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Mobile App Interface Design</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Seamless Frontend Design Flow</li>
-              </ul>
             </div>
-            <div class="pt-6 mt-6 border-t border-white/5">
-              <a href="#contact" class="text-xs font-bold uppercase tracking-wider text-slate-400 group-hover:text-brand-orange transition-colors inline-flex items-center gap-1.5">
-                Inquire Service <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-              </a>
+            <div class="hidden sm:block pt-3 mt-3 border-t border-brand-softBorder group-hover:border-white/10">
+              <span class="text-[10px] md:text-xs font-bold text-brand-violet group-hover:text-brand-bright inline-flex items-center gap-1">
+                Explore <i data-lucide="chevron-right" class="w-3 h-3"></i>
+              </span>
             </div>
           </div>
 
-          <!-- Service 06: Custom Graphic Design -->
-          <div class="group relative rounded-3xl p-8 bg-brand-card border border-brand-border hover:border-brand-orange/60 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between shadow-lg">
+          <!-- Card 06: Custom Design -->
+          <div class="service-card group p-2.5 sm:p-5 md:p-7 rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 flex flex-col justify-between">
             <div>
-              <div class="flex items-center justify-between mb-8">
-                <span class="text-2xl font-headline font-black text-brand-orange font-mono">06</span>
-                <div class="w-10 h-10 rounded-full bg-brand-orangeMuted border border-brand-orange/30 flex items-center justify-center text-brand-orange group-hover:bg-brand-orange group-hover:text-black transition-all">
-                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              <div class="flex items-center justify-between mb-1.5 sm:mb-4">
+                <span class="text-xs sm:text-base md:text-xl font-headline font-black text-brand-violet group-hover:text-brand-bright font-mono">06</span>
+                <div class="w-5 h-5 sm:w-8 sm:h-8 rounded-full bg-brand-violet/10 group-hover:bg-brand-bright group-hover:text-brand-dark text-brand-violet flex items-center justify-center transition-colors">
+                  <i data-lucide="sparkles" class="w-3 h-3 sm:w-4 sm:h-4"></i>
                 </div>
               </div>
-              <h3 class="text-2xl font-bold font-display text-white mb-3">CUSTOM GRAPHIC DESIGN</h3>
-              <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                Have a bespoke requirement? We create custom visual solutions tailored specifically to your project's unique vision.
+              <h3 class="text-[11px] sm:text-base md:text-xl font-bold font-display text-brand-dark group-hover:text-white mb-1 leading-tight sm:leading-snug">
+                Custom Design
+              </h3>
+              <p class="text-[9px] sm:text-xs md:text-sm text-brand-muted group-hover:text-slate-300 leading-tight sm:leading-relaxed">
+                Illustrations, campaigns & bespoke solutions.
               </p>
-              <ul class="text-xs text-slate-300 space-y-2.5 pt-4 border-t border-white/5 font-mono">
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Custom Vector Illustrations</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Special Event Graphics</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Campaign & Promotional Visuals</li>
-                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> Tailored Creative Retainers</li>
-              </ul>
             </div>
-            <div class="pt-6 mt-6 border-t border-white/5">
-              <a href="#contact" class="text-xs font-bold uppercase tracking-wider text-slate-400 group-hover:text-brand-orange transition-colors inline-flex items-center gap-1.5">
-                Inquire Service <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-              </a>
+            <div class="hidden sm:block pt-3 mt-3 border-t border-brand-softBorder group-hover:border-white/10">
+              <span class="text-[10px] md:text-xs font-bold text-brand-violet group-hover:text-brand-bright inline-flex items-center gap-1">
+                Explore <i data-lucide="chevron-right" class="w-3 h-3"></i>
+              </span>
             </div>
           </div>
 
@@ -445,300 +414,113 @@
     </section>
 
     <!-- ========================================== -->
-    <!-- 3. PORTFOLIO SECTION (THE CENTERPIECE)     -->
+    <!-- 3. PORTFOLIO SECTION (3x2 GRID ON MOBILE)  -->
     <!-- ========================================== -->
-    <section id="portfolio" class="py-24 relative px-4 sm:px-6 lg:px-8 border-t border-brand-border">
+    <section id="portfolio" class="py-16 sm:py-24 relative px-4 sm:px-6 lg:px-8 border-t border-brand-softBorder bg-white">
       <div class="max-w-7xl mx-auto">
         
         <!-- Section Header -->
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-16">
           <div>
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-nearBlack border border-brand-border text-xs font-mono uppercase text-brand-orange tracking-widest mb-4">
-              <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> SELECTED WORK
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-bgLight border border-brand-softBorder text-xs font-mono uppercase text-brand-violet tracking-widest mb-3 shadow-sm font-semibold">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-violet"></span> SELECTED WORK
             </div>
-            <h2 class="text-3xl sm:text-5xl lg:text-6xl font-display font-black text-white uppercase tracking-tight">
-              FEATURED <span class="text-brand-orange">PROJECTS.</span>
+            <h2 class="text-3xl sm:text-5xl lg:text-6xl font-display font-black text-brand-dark uppercase tracking-tight">
+              FEATURED <span class="text-brand-violet">PROJECTS.</span>
             </h2>
-            <p class="text-slate-400 text-base sm:text-lg mt-2 max-w-xl">
-              Ideas transformed into powerful visual experiences. Click any project to inspect full case details.
+            <p class="text-brand-muted text-sm sm:text-lg mt-2 max-w-xl">
+              Ideas transformed into powerful visual experiences. Tap any project to open full case study details.
             </p>
           </div>
-          <div class="mt-6 md:mt-0 text-xs font-mono text-brand-muted uppercase">
+          <div class="mt-4 md:mt-0 text-xs font-mono text-brand-muted uppercase font-semibold">
             6 Selected Showcases // Studio Archive
           </div>
         </div>
 
-        <!-- EXACTLY 6 PORTFOLIO PROJECTS (2-Column Editorial Grid on Desktop, Vertical on Mobile) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+        <!-- EXACTLY 6 PORTFOLIO BOXES: 3x2 GRID ON MOBILE, 2-COL / 3-COL ON DESKTOP -->
+        <div class="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 lg:gap-8">
           
-          <!-- PROJECT 01 — BRAND IDENTITY: LUMINA CREATIVE -->
-          <article class="project-card group rounded-3xl bg-brand-card border border-brand-border hover:border-brand-orange/60 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col justify-between" onclick="openProjectModal('lumina')">
-            <div class="h-72 sm:h-84 md:h-96 w-full relative overflow-hidden bg-gradient-to-br from-neutral-950 via-zinc-900 to-black p-6 sm:p-8 flex items-center justify-center">
-              <!-- Visual Mockup Canvas -->
-              <div class="w-full h-full rounded-2xl border border-white/10 bg-black/60 p-6 flex flex-col justify-between group-hover:scale-[1.03] transition-transform duration-500 shadow-2xl">
-                <div class="flex justify-between items-center text-xs font-mono">
-                  <span class="text-brand-orange font-bold">01 // BRAND IDENTITY</span>
-                  <span class="text-slate-400">ARCHIVE 2026</span>
-                </div>
-                <div class="text-center py-6">
-                  <h4 class="text-3xl sm:text-4xl font-headline font-black tracking-widest text-white">L U M I N A</h4>
-                  <p class="text-[11px] tracking-[0.3em] text-brand-orange uppercase mt-1.5 font-mono">Creative Suite & Identity</p>
-                </div>
-                <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 pt-3 border-t border-white/5">
-                  <span>LOGO & GUIDELINES</span>
-                  <span class="text-white">FULL SYSTEM</span>
-                </div>
-              </div>
-              <!-- Hover Overlay -->
-              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
-                <span class="px-5 py-2.5 rounded-full bg-brand-orange text-black font-bold text-xs uppercase tracking-wider shadow-lg flex items-center gap-2">
-                  <span>VIEW PROJECT</span>
-                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-                </span>
+          <!-- Box 01: Lumina Creative -->
+          <article class="portfolio-card group rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark p-2 sm:p-4 shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 cursor-pointer flex flex-col justify-between" onclick="openProjectModal('lumina')">
+            <div class="h-24 sm:h-44 md:h-56 lg:h-64 w-full rounded-xl overflow-hidden bg-brand-dark relative flex items-center justify-center p-2 sm:p-4 text-white">
+              <div class="text-center">
+                <span class="text-[8px] sm:text-xs font-mono text-brand-bright block font-bold">01 // BRAND</span>
+                <span class="text-xs sm:text-lg md:text-2xl font-headline font-black tracking-widest text-white">LUMINA</span>
               </div>
             </div>
-            <div class="p-6 sm:p-8">
-              <div class="flex items-center justify-between text-xs font-mono text-brand-orange mb-2">
-                <span>01 — BRAND IDENTITY</span>
-                <span>FINTECH SYSTEM</span>
-              </div>
-              <h3 class="text-2xl font-bold font-display text-white mb-2 group-hover:text-brand-orange transition-colors">LUMINA CREATIVE</h3>
-              <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                Complete visual identity and brand system engineered for modern high-trust digital services.
-              </p>
-              <div class="pt-4 border-t border-white/5 flex items-center justify-between">
-                <span class="text-xs font-semibold text-white group-hover:text-brand-orange transition-colors">EXPLORE CASE STUDY</span>
-                <div class="w-9 h-9 rounded-full bg-brand-orangeMuted text-brand-orange group-hover:bg-brand-orange group-hover:text-black flex items-center justify-center transition-all">
-                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                </div>
-              </div>
+            <div class="pt-2 sm:pt-3">
+              <span class="text-[8px] sm:text-xs font-mono text-brand-violet group-hover:text-brand-bright block font-semibold truncate">01 — Brand Identity</span>
+              <h3 class="text-[10px] sm:text-base font-bold font-display text-brand-dark group-hover:text-white truncate">Lumina Creative</h3>
             </div>
           </article>
 
-          <!-- PROJECT 02 — SOCIAL MEDIA: KINETIC SOCIAL -->
-          <article class="project-card group rounded-3xl bg-brand-card border border-brand-border hover:border-brand-orange/60 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col justify-between" onclick="openProjectModal('kinetic')">
-            <div class="h-72 sm:h-84 md:h-96 w-full relative overflow-hidden bg-gradient-to-tr from-neutral-950 via-zinc-950 to-neutral-900 p-6 sm:p-8 flex items-center justify-center">
-              <div class="w-full h-full rounded-2xl border border-white/10 bg-black/60 p-6 flex flex-col justify-between group-hover:scale-[1.03] transition-transform duration-500 shadow-2xl">
-                <div class="flex justify-between items-center text-xs font-mono">
-                  <span class="text-brand-orange font-bold">02 // SOCIAL MEDIA</span>
-                  <span class="text-slate-400">@KINETIC_LABS</span>
-                </div>
-                <div class="flex items-center justify-center gap-3 py-6">
-                  <div class="w-20 h-28 rounded-xl bg-brand-nearBlack border border-white/10 p-2.5 flex flex-col justify-between text-[9px] font-mono text-slate-300">
-                    <span class="text-white font-bold">REELS</span>
-                    <span class="text-brand-orange font-bold text-center text-base">340%</span>
-                    <span class="text-[8px] text-slate-400">GROWTH</span>
-                  </div>
-                  <div class="w-24 h-32 rounded-xl bg-gradient-to-b from-brand-orange to-red-600 border border-brand-orange p-3 flex flex-col justify-between text-[9px] text-black font-black shadow-xl">
-                    <span>CAROUSEL</span>
-                    <span class="font-mono text-center text-[10px]">VIRAL FEED</span>
-                    <span class="text-[8px] tracking-widest uppercase">SLR STUDIO</span>
-                  </div>
-                  <div class="w-20 h-28 rounded-xl bg-brand-nearBlack border border-white/10 p-2.5 flex flex-col justify-between text-[9px] font-mono text-slate-300">
-                    <span class="text-white font-bold">STORIES</span>
-                    <span class="text-brand-orange font-bold text-center text-base">98%</span>
-                    <span class="text-[8px] text-slate-400">ENGAGEMENT</span>
-                  </div>
-                </div>
-                <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 pt-3 border-t border-white/5">
-                  <span>30+ TEMPLATES</span>
-                  <span class="text-white">INSTAGRAM & LINKEDIN</span>
-                </div>
-              </div>
-              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
-                <span class="px-5 py-2.5 rounded-full bg-brand-orange text-black font-bold text-xs uppercase tracking-wider shadow-lg flex items-center gap-2">
-                  <span>VIEW PROJECT</span>
-                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-                </span>
+          <!-- Box 02: Kinetic Social -->
+          <article class="portfolio-card group rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark p-2 sm:p-4 shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 cursor-pointer flex flex-col justify-between" onclick="openProjectModal('kinetic')">
+            <div class="h-24 sm:h-44 md:h-56 lg:h-64 w-full rounded-xl overflow-hidden bg-gradient-to-br from-brand-violet to-brand-dark relative flex items-center justify-center p-2 sm:p-4 text-white">
+              <div class="text-center">
+                <span class="text-[8px] sm:text-xs font-mono text-brand-bright block font-bold">02 // SOCIAL</span>
+                <span class="text-xs sm:text-lg md:text-2xl font-headline font-black tracking-widest text-white">KINETIC</span>
               </div>
             </div>
-            <div class="p-6 sm:p-8">
-              <div class="flex items-center justify-between text-xs font-mono text-brand-orange mb-2">
-                <span>02 — SOCIAL MEDIA</span>
-                <span>CAMPAIGN DESIGN</span>
-              </div>
-              <h3 class="text-2xl font-bold font-display text-white mb-2 group-hover:text-brand-orange transition-colors">KINETIC SOCIAL</h3>
-              <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                Modern social media campaign and content design formulating a high-retention athletic aesthetic.
-              </p>
-              <div class="pt-4 border-t border-white/5 flex items-center justify-between">
-                <span class="text-xs font-semibold text-white group-hover:text-brand-orange transition-colors">EXPLORE CASE STUDY</span>
-                <div class="w-9 h-9 rounded-full bg-brand-orangeMuted text-brand-orange group-hover:bg-brand-orange group-hover:text-black flex items-center justify-center transition-all">
-                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                </div>
-              </div>
+            <div class="pt-2 sm:pt-3">
+              <span class="text-[8px] sm:text-xs font-mono text-brand-violet group-hover:text-brand-bright block font-semibold truncate">02 — Social Media</span>
+              <h3 class="text-[10px] sm:text-base font-bold font-display text-brand-dark group-hover:text-white truncate">Kinetic Social</h3>
             </div>
           </article>
 
-          <!-- PROJECT 03 — PRINT & PACKAGING: NEBULA PACKAGING -->
-          <article class="project-card group rounded-3xl bg-brand-card border border-brand-border hover:border-brand-orange/60 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col justify-between" onclick="openProjectModal('nebula')">
-            <div class="h-72 sm:h-84 md:h-96 w-full relative overflow-hidden bg-gradient-to-bl from-zinc-900 via-neutral-950 to-black p-6 sm:p-8 flex items-center justify-center">
-              <div class="w-full h-full rounded-2xl border border-white/10 bg-black/60 p-6 flex flex-col justify-between group-hover:scale-[1.03] transition-transform duration-500 shadow-2xl">
-                <div class="flex justify-between items-center text-xs font-mono">
-                  <span class="text-brand-orange font-bold">03 // PACKAGING</span>
-                  <span class="text-slate-400">ARTISAN ROASTERS</span>
-                </div>
-                <div class="text-center py-6">
-                  <div class="inline-block px-5 py-3 rounded-xl bg-brand-nearBlack border border-brand-orange/40 shadow-xl">
-                    <span class="text-[10px] tracking-widest font-mono text-brand-orange block">SPECIALTY COFFEE</span>
-                    <span class="text-xl sm:text-2xl font-headline font-bold text-white">NEBULA POUCH</span>
-                  </div>
-                  <div class="text-[11px] text-slate-400 mt-2 font-mono">Matte Soft-Touch + Spot UV Copper</div>
-                </div>
-                <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 pt-3 border-t border-white/5">
-                  <span>NET WT 250G</span>
-                  <span class="text-white">CUSTOM DIE-LINES</span>
-                </div>
-              </div>
-              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
-                <span class="px-5 py-2.5 rounded-full bg-brand-orange text-black font-bold text-xs uppercase tracking-wider shadow-lg flex items-center gap-2">
-                  <span>VIEW PROJECT</span>
-                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-                </span>
+          <!-- Box 03: Nebula Packaging -->
+          <article class="portfolio-card group rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark p-2 sm:p-4 shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 cursor-pointer flex flex-col justify-between" onclick="openProjectModal('nebula')">
+            <div class="h-24 sm:h-44 md:h-56 lg:h-64 w-full rounded-xl overflow-hidden bg-brand-dark relative flex items-center justify-center p-2 sm:p-4 text-white">
+              <div class="text-center">
+                <span class="text-[8px] sm:text-xs font-mono text-brand-bright block font-bold">03 // PACKAGING</span>
+                <span class="text-xs sm:text-lg md:text-2xl font-headline font-black tracking-widest text-white">NEBULA</span>
               </div>
             </div>
-            <div class="p-6 sm:p-8">
-              <div class="flex items-center justify-between text-xs font-mono text-brand-orange mb-2">
-                <span>03 — PRINT & PACKAGING</span>
-                <span>PRODUCT PRESENTATION</span>
-              </div>
-              <h3 class="text-2xl font-bold font-display text-white mb-2 group-hover:text-brand-orange transition-colors">NEBULA PACKAGING</h3>
-              <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                Premium packaging and product presentation designed to command premium retail shelf presence.
-              </p>
-              <div class="pt-4 border-t border-white/5 flex items-center justify-between">
-                <span class="text-xs font-semibold text-white group-hover:text-brand-orange transition-colors">EXPLORE CASE STUDY</span>
-                <div class="w-9 h-9 rounded-full bg-brand-orangeMuted text-brand-orange group-hover:bg-brand-orange group-hover:text-black flex items-center justify-center transition-all">
-                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                </div>
-              </div>
+            <div class="pt-2 sm:pt-3">
+              <span class="text-[8px] sm:text-xs font-mono text-brand-violet group-hover:text-brand-bright block font-semibold truncate">03 — Packaging</span>
+              <h3 class="text-[10px] sm:text-base font-bold font-display text-brand-dark group-hover:text-white truncate">Nebula Coffee</h3>
             </div>
           </article>
 
-          <!-- PROJECT 04 — POSTER DESIGN: SOLSTICE FEST -->
-          <article class="project-card group rounded-3xl bg-brand-card border border-brand-border hover:border-brand-orange/60 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col justify-between" onclick="openProjectModal('solstice')">
-            <div class="h-72 sm:h-84 md:h-96 w-full relative overflow-hidden bg-gradient-to-r from-neutral-950 via-zinc-900 to-black p-6 sm:p-8 flex items-center justify-center">
-              <div class="w-full h-full rounded-2xl border border-white/10 bg-black/60 p-6 flex flex-col justify-between group-hover:scale-[1.03] transition-transform duration-500 shadow-2xl">
-                <div class="flex justify-between items-center text-xs font-mono">
-                  <span class="text-brand-orange font-bold">04 // POSTER DESIGN</span>
-                  <span class="text-slate-400">LARGE FORMAT</span>
-                </div>
-                <div class="text-center py-6">
-                  <div class="text-3xl sm:text-4xl font-headline font-black text-white tracking-tight">SOLSTICE</div>
-                  <div class="text-xs text-brand-orange font-mono tracking-widest mt-1">AUDIO-VISUAL FESTIVAL</div>
-                </div>
-                <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 pt-3 border-t border-white/5">
-                  <span>SWISS GRID ALIGNED</span>
-                  <span class="text-white">A1 SCREENPRINT</span>
-                </div>
-              </div>
-              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
-                <span class="px-5 py-2.5 rounded-full bg-brand-orange text-black font-bold text-xs uppercase tracking-wider shadow-lg flex items-center gap-2">
-                  <span>VIEW PROJECT</span>
-                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-                </span>
+          <!-- Box 04: Solstice Fest -->
+          <article class="portfolio-card group rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark p-2 sm:p-4 shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 cursor-pointer flex flex-col justify-between" onclick="openProjectModal('solstice')">
+            <div class="h-24 sm:h-44 md:h-56 lg:h-64 w-full rounded-xl overflow-hidden bg-gradient-to-tr from-brand-dark via-brand-violet/70 to-brand-bright relative flex items-center justify-center p-2 sm:p-4 text-white">
+              <div class="text-center">
+                <span class="text-[8px] sm:text-xs font-mono text-white block font-bold">04 // POSTER</span>
+                <span class="text-xs sm:text-lg md:text-2xl font-headline font-black tracking-widest text-white">SOLSTICE</span>
               </div>
             </div>
-            <div class="p-6 sm:p-8">
-              <div class="flex items-center justify-between text-xs font-mono text-brand-orange mb-2">
-                <span>04 — POSTER DESIGN</span>
-                <span>EVENT PROMOTION</span>
-              </div>
-              <h3 class="text-2xl font-bold font-display text-white mb-2 group-hover:text-brand-orange transition-colors">SOLSTICE FEST</h3>
-              <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                Creative event poster and promotional campaign blending generative typography with bold composition.
-              </p>
-              <div class="pt-4 border-t border-white/5 flex items-center justify-between">
-                <span class="text-xs font-semibold text-white group-hover:text-brand-orange transition-colors">EXPLORE CASE STUDY</span>
-                <div class="w-9 h-9 rounded-full bg-brand-orangeMuted text-brand-orange group-hover:bg-brand-orange group-hover:text-black flex items-center justify-center transition-all">
-                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                </div>
-              </div>
+            <div class="pt-2 sm:pt-3">
+              <span class="text-[8px] sm:text-xs font-mono text-brand-violet group-hover:text-brand-bright block font-semibold truncate">04 — Poster Design</span>
+              <h3 class="text-[10px] sm:text-base font-bold font-display text-brand-dark group-hover:text-white truncate">Solstice Fest</h3>
             </div>
           </article>
 
-          <!-- PROJECT 05 — ADVERTISING: VORTEX CAMPAIGN -->
-          <article class="project-card group rounded-3xl bg-brand-card border border-brand-border hover:border-brand-orange/60 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col justify-between" onclick="openProjectModal('vortex')">
-            <div class="h-72 sm:h-84 md:h-96 w-full relative overflow-hidden bg-gradient-to-tl from-zinc-950 via-neutral-900 to-black p-6 sm:p-8 flex items-center justify-center">
-              <div class="w-full h-full rounded-2xl border border-white/10 bg-black/60 p-6 flex flex-col justify-between group-hover:scale-[1.03] transition-transform duration-500 shadow-2xl">
-                <div class="flex justify-between items-center text-xs font-mono">
-                  <span class="text-brand-orange font-bold">05 // ADVERTISING</span>
-                  <span class="text-slate-400">PRODUCT LAUNCH</span>
-                </div>
-                <div class="text-center py-6">
-                  <span class="text-[10px] font-mono tracking-widest text-brand-orange uppercase">HIGH IMPACT PERFORMANCE</span>
-                  <h4 class="text-2xl sm:text-3xl font-headline font-black text-white mt-1">POWER YOUR FOCUS</h4>
-                  <div class="text-xs text-slate-400 font-mono mt-2">VORTEX ENERGY // 2026</div>
-                </div>
-                <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 pt-3 border-t border-white/5">
-                  <span>OMNICHANNEL SUITE</span>
-                  <span class="text-brand-orange">+41% CTR</span>
-                </div>
-              </div>
-              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
-                <span class="px-5 py-2.5 rounded-full bg-brand-orange text-black font-bold text-xs uppercase tracking-wider shadow-lg flex items-center gap-2">
-                  <span>VIEW PROJECT</span>
-                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-                </span>
+          <!-- Box 05: Vortex Campaign -->
+          <article class="portfolio-card group rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark p-2 sm:p-4 shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 cursor-pointer flex flex-col justify-between" onclick="openProjectModal('vortex')">
+            <div class="h-24 sm:h-44 md:h-56 lg:h-64 w-full rounded-xl overflow-hidden bg-brand-dark relative flex items-center justify-center p-2 sm:p-4 text-white">
+              <div class="text-center">
+                <span class="text-[8px] sm:text-xs font-mono text-brand-bright block font-bold">05 // ADVERTISING</span>
+                <span class="text-xs sm:text-lg md:text-2xl font-headline font-black tracking-widest text-white">VORTEX</span>
               </div>
             </div>
-            <div class="p-6 sm:p-8">
-              <div class="flex items-center justify-between text-xs font-mono text-brand-orange mb-2">
-                <span>05 — ADVERTISING</span>
-                <span>PAID MEDIA SUITE</span>
-              </div>
-              <h3 class="text-2xl font-bold font-display text-white mb-2 group-hover:text-brand-orange transition-colors">VORTEX CAMPAIGN</h3>
-              <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                High-impact advertising and promotional creatives built to maximize paid acquisition conversions.
-              </p>
-              <div class="pt-4 border-t border-white/5 flex items-center justify-between">
-                <span class="text-xs font-semibold text-white group-hover:text-brand-orange transition-colors">EXPLORE CASE STUDY</span>
-                <div class="w-9 h-9 rounded-full bg-brand-orangeMuted text-brand-orange group-hover:bg-brand-orange group-hover:text-black flex items-center justify-center transition-all">
-                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                </div>
-              </div>
+            <div class="pt-2 sm:pt-3">
+              <span class="text-[8px] sm:text-xs font-mono text-brand-violet group-hover:text-brand-bright block font-semibold truncate">05 — Advertising</span>
+              <h3 class="text-[10px] sm:text-base font-bold font-display text-brand-dark group-hover:text-white truncate">Vortex Campaign</h3>
             </div>
           </article>
 
-          <!-- PROJECT 06 — BRAND & UI: AURA DIGITAL -->
-          <article class="project-card group rounded-3xl bg-brand-card border border-brand-border hover:border-brand-orange/60 transition-all duration-300 overflow-hidden cursor-pointer flex flex-col justify-between" onclick="openProjectModal('aura')">
-            <div class="h-72 sm:h-84 md:h-96 w-full relative overflow-hidden bg-gradient-to-br from-neutral-900 via-zinc-950 to-black p-6 sm:p-8 flex items-center justify-center">
-              <div class="w-full h-full rounded-2xl border border-white/10 bg-black/60 p-6 flex flex-col justify-between group-hover:scale-[1.03] transition-transform duration-500 shadow-2xl">
-                <div class="flex justify-between items-center text-xs font-mono">
-                  <span class="text-brand-orange font-bold">06 // BRAND & UI</span>
-                  <span class="text-slate-400">DIGITAL INTERFACE</span>
-                </div>
-                <div class="text-center py-6">
-                  <h4 class="text-3xl sm:text-4xl font-headline font-bold text-white tracking-widest">A U R A</h4>
-                  <p class="text-[11px] text-brand-orange font-mono uppercase tracking-widest mt-1.5">Modern Digital Platform</p>
-                </div>
-                <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 pt-3 border-t border-white/5">
-                  <span>RESPONSIVE WEB UI</span>
-                  <span class="text-white">ECOMMERCE FLOW</span>
-                </div>
-              </div>
-              <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
-                <span class="px-5 py-2.5 rounded-full bg-brand-orange text-black font-bold text-xs uppercase tracking-wider shadow-lg flex items-center gap-2">
-                  <span>VIEW PROJECT</span>
-                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-                </span>
+          <!-- Box 06: Aura Digital -->
+          <article class="portfolio-card group rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark p-2 sm:p-4 shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 cursor-pointer flex flex-col justify-between" onclick="openProjectModal('aura')">
+            <div class="h-24 sm:h-44 md:h-56 lg:h-64 w-full rounded-xl overflow-hidden bg-gradient-to-br from-brand-violet/90 to-brand-dark relative flex items-center justify-center p-2 sm:p-4 text-white">
+              <div class="text-center">
+                <span class="text-[8px] sm:text-xs font-mono text-brand-bright block font-bold">06 // BRAND & UI</span>
+                <span class="text-xs sm:text-lg md:text-2xl font-headline font-black tracking-widest text-white">AURA</span>
               </div>
             </div>
-            <div class="p-6 sm:p-8">
-              <div class="flex items-center justify-between text-xs font-mono text-brand-orange mb-2">
-                <span>06 — BRAND & UI</span>
-                <span>DIGITAL EXPERIENCE</span>
-              </div>
-              <h3 class="text-2xl font-bold font-display text-white mb-2 group-hover:text-brand-orange transition-colors">AURA DIGITAL</h3>
-              <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                Brand identity combined with modern digital interface design and intuitive e-commerce checkout.
-              </p>
-              <div class="pt-4 border-t border-white/5 flex items-center justify-between">
-                <span class="text-xs font-semibold text-white group-hover:text-brand-orange transition-colors">EXPLORE CASE STUDY</span>
-                <div class="w-9 h-9 rounded-full bg-brand-orangeMuted text-brand-orange group-hover:bg-brand-orange group-hover:text-black flex items-center justify-center transition-all">
-                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                </div>
-              </div>
+            <div class="pt-2 sm:pt-3">
+              <span class="text-[8px] sm:text-xs font-mono text-brand-violet group-hover:text-brand-bright block font-semibold truncate">06 — Brand & UI</span>
+              <h3 class="text-[10px] sm:text-base font-bold font-display text-brand-dark group-hover:text-white truncate">Aura Digital</h3>
             </div>
           </article>
 
@@ -748,110 +530,145 @@
     </section>
 
     <!-- ========================================== -->
-    <!-- 4. ABOUT SECTION                           -->
+    <!-- 4. ABOUT SECTION (3x2 GRID ON MOBILE)      -->
     <!-- ========================================== -->
-    <section id="about" class="py-24 relative px-4 sm:px-6 lg:px-8 border-t border-brand-border bg-brand-nearBlack/40">
+    <section id="about" class="py-16 sm:py-24 relative px-4 sm:px-6 lg:px-8 border-t border-brand-softBorder bg-brand-bgLight">
       <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-20">
-          
-          <!-- Editorial Creative Graphic Column -->
+        
+        <!-- About Top Intro -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center mb-12 sm:mb-16">
           <div class="lg:col-span-5 relative">
-            <div class="relative mx-auto max-w-md lg:max-w-none rounded-3xl bg-brand-card border border-brand-border p-8 shadow-2xl overflow-hidden">
-              <div class="absolute -top-24 -left-24 w-60 h-60 bg-brand-orange/15 rounded-full blur-3xl pointer-events-none"></div>
-
-              <div class="relative z-10 flex flex-col items-center text-center">
-                <div class="w-32 h-32 p-4 rounded-2xl bg-brand-nearBlack border border-brand-border flex items-center justify-center mb-6 shadow-inner">
-                  <img src="assets/slr-logo.png" alt="SLR GRAPHICS Emblem" class="w-full h-auto object-contain">
-                </div>
-                <h3 class="font-headline font-bold text-2xl text-white uppercase tracking-wider">SLR GRAPHICS</h3>
-                <p class="text-xs font-mono uppercase tracking-[0.25em] text-brand-orange mt-1 mb-8">Creative Graphic Design Studio</p>
-
-                <div class="w-full space-y-3 text-left">
-                  <div class="p-3.5 rounded-xl bg-brand-nearBlack border border-white/5 flex items-center justify-between">
-                    <span class="text-xs text-brand-muted font-mono uppercase">Studio Focus</span>
-                    <span class="text-xs font-bold text-white">Visual Identities</span>
-                  </div>
-                  <div class="p-3.5 rounded-xl bg-brand-nearBlack border border-white/5 flex items-center justify-between">
-                    <span class="text-xs text-brand-muted font-mono uppercase">Standards</span>
-                    <span class="text-xs font-bold text-white">Pixel-Perfect</span>
-                  </div>
-                  <div class="p-3.5 rounded-xl bg-brand-nearBlack border border-white/5 flex items-center justify-between">
-                    <span class="text-xs text-brand-muted font-mono uppercase">Creative Direction</span>
-                    <span class="text-xs font-bold text-brand-orange">Original Concepts</span>
-                  </div>
-                </div>
+            <div class="rounded-[20px] bg-brand-dark text-white p-6 sm:p-8 shadow-xl">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 p-2.5 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center mb-4">
+                <img src="assets/slr-logo.png" alt="SLR GRAPHICS" class="w-full h-full object-contain">
               </div>
+              <h3 class="font-headline font-bold text-xl sm:text-2xl text-white uppercase tracking-wider">SLR GRAPHICS</h3>
+              <p class="text-xs font-mono uppercase tracking-[0.2em] text-brand-bright mt-1 mb-4">Modern Creative Studio</p>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Dedicated to helping businesses and creators communicate with unshakeable visual confidence.
+              </p>
             </div>
           </div>
 
-          <!-- Editorial Text Column -->
-          <div class="lg:col-span-7 space-y-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-nearBlack border border-brand-border text-xs font-mono uppercase text-brand-orange tracking-widest">
-              <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> ABOUT SLR GRAPHICS
+          <div class="lg:col-span-7 space-y-4 sm:space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-brand-softBorder text-xs font-mono uppercase text-brand-violet tracking-widest shadow-sm font-semibold">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-violet"></span> ABOUT SLR GRAPHICS
             </div>
-
-            <h2 class="text-3xl sm:text-5xl lg:text-6xl font-display font-black text-white uppercase tracking-tight leading-tight">
-              DESIGN WITH <span class="text-brand-orange">PURPOSE.</span>
+            <h2 class="text-3xl sm:text-5xl font-display font-black text-brand-dark uppercase tracking-tight leading-tight">
+              DESIGN WITH <span class="text-brand-violet">PURPOSE.</span>
             </h2>
-
-            <p class="text-lg text-slate-200 leading-relaxed font-medium">
+            <p class="text-base sm:text-lg text-brand-dark font-medium leading-relaxed">
               SLR GRAPHICS is a creative graphic design studio focused on helping businesses, brands, creators and individuals communicate through impactful visuals.
             </p>
-
-            <p class="text-slate-400 text-base leading-relaxed">
+            <p class="text-sm sm:text-base text-brand-muted leading-relaxed">
               We don't simply create designs that look good. We focus on understanding the brand, audience, message and purpose behind every project.
             </p>
-
-            <p class="text-slate-400 text-base leading-relaxed">
-              Every detail is considered—from typography and color balance to concept and composition—ensuring your brand communicates with unshakeable authority.
-            </p>
           </div>
-
         </div>
 
-        <!-- 4 Key Principles Grid -->
-        <div class="border-t border-brand-border pt-16">
-          <div class="max-w-xl mb-10">
-            <span class="text-xs font-mono uppercase text-brand-orange tracking-widest block mb-2">Our Foundation</span>
-            <h3 class="text-2xl sm:text-3xl font-display font-bold text-white uppercase">4 Key Principles</h3>
+        <!-- 6 COMPACT ABOUT BOXES (3x2 GRID ON MOBILE, 3-COL ON DESKTOP) -->
+        <div class="pt-6 sm:pt-10 border-t border-brand-softBorder">
+          <div class="mb-6 sm:mb-8">
+            <span class="text-xs font-mono uppercase text-brand-violet tracking-widest block mb-1 font-bold">Studio Foundations</span>
+            <h3 class="text-xl sm:text-3xl font-display font-bold text-brand-dark uppercase">6 Pillars of Excellence</h3>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 lg:gap-8">
             
-            <!-- Principle 01 -->
-            <div class="p-7 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-orange/50 transition-all duration-300">
-              <span class="text-xl font-headline font-black text-brand-orange font-mono block mb-3">01</span>
-              <h4 class="text-lg font-bold font-display text-white mb-2">CREATIVE THINKING</h4>
-              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                Original concepts built around each project's unique purpose without relying on generic templates.
-              </p>
+            <!-- Box 01: Creative Thinking -->
+            <div class="about-card group p-2.5 sm:p-5 md:p-6 rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-1.5 sm:mb-3">
+                  <span class="text-xs sm:text-sm font-headline font-black text-brand-violet group-hover:text-brand-bright font-mono">01</span>
+                  <i data-lucide="lightbulb" class="w-3.5 h-3.5 sm:w-5 sm:h-5 text-brand-violet group-hover:text-brand-bright"></i>
+                </div>
+                <h4 class="text-[10px] sm:text-sm md:text-base font-bold font-display text-brand-dark group-hover:text-white mb-1 uppercase leading-tight">
+                  Creative Thinking
+                </h4>
+                <p class="text-[8px] sm:text-xs text-brand-muted group-hover:text-slate-300 leading-tight">
+                  Original concepts built around your brand.
+                </p>
+              </div>
             </div>
 
-            <!-- Principle 02 -->
-            <div class="p-7 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-orange/50 transition-all duration-300">
-              <span class="text-xl font-headline font-black text-brand-orange font-mono block mb-3">02</span>
-              <h4 class="text-lg font-bold font-display text-white mb-2">PROFESSIONAL DESIGN</h4>
-              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                Clean typography, balanced composition, and robust visual systems that establish immediate credibility.
-              </p>
+            <!-- Box 02: Professional Design -->
+            <div class="about-card group p-2.5 sm:p-5 md:p-6 rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-1.5 sm:mb-3">
+                  <span class="text-xs sm:text-sm font-headline font-black text-brand-violet group-hover:text-brand-bright font-mono">02</span>
+                  <i data-lucide="layout-grid" class="w-3.5 h-3.5 sm:w-5 sm:h-5 text-brand-violet group-hover:text-brand-bright"></i>
+                </div>
+                <h4 class="text-[10px] sm:text-sm md:text-base font-bold font-display text-brand-dark group-hover:text-white mb-1 uppercase leading-tight">
+                  Professional Design
+                </h4>
+                <p class="text-[8px] sm:text-xs text-brand-muted group-hover:text-slate-300 leading-tight">
+                  Clean and purposeful visual communication.
+                </p>
+              </div>
             </div>
 
-            <!-- Principle 03 -->
-            <div class="p-7 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-orange/50 transition-all duration-300">
-              <span class="text-xl font-headline font-black text-brand-orange font-mono block mb-3">03</span>
-              <h4 class="text-lg font-bold font-display text-white mb-2">BRAND CONSISTENCY</h4>
-              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                Maintaining a unified visual identity across platforms, media channels, and client touchpoints.
-              </p>
+            <!-- Box 03: Brand Consistency -->
+            <div class="about-card group p-2.5 sm:p-5 md:p-6 rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-1.5 sm:mb-3">
+                  <span class="text-xs sm:text-sm font-headline font-black text-brand-violet group-hover:text-brand-bright font-mono">03</span>
+                  <i data-lucide="link" class="w-3.5 h-3.5 sm:w-5 sm:h-5 text-brand-violet group-hover:text-brand-bright"></i>
+                </div>
+                <h4 class="text-[10px] sm:text-sm md:text-base font-bold font-display text-brand-dark group-hover:text-white mb-1 uppercase leading-tight">
+                  Brand Consistency
+                </h4>
+                <p class="text-[8px] sm:text-xs text-brand-muted group-hover:text-slate-300 leading-tight">
+                  A unified visual identity across platforms.
+                </p>
+              </div>
             </div>
 
-            <!-- Principle 04 -->
-            <div class="p-7 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-orange/50 transition-all duration-300">
-              <span class="text-xl font-headline font-black text-brand-orange font-mono block mb-3">04</span>
-              <h4 class="text-lg font-bold font-display text-white mb-2">ATTENTION TO DETAIL</h4>
-              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                Every element, kerning curve, margin, and color swatch is carefully refined before final delivery.
-              </p>
+            <!-- Box 04: Attention to Detail -->
+            <div class="about-card group p-2.5 sm:p-5 md:p-6 rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-1.5 sm:mb-3">
+                  <span class="text-xs sm:text-sm font-headline font-black text-brand-violet group-hover:text-brand-bright font-mono">04</span>
+                  <i data-lucide="maximize" class="w-3.5 h-3.5 sm:w-5 sm:h-5 text-brand-violet group-hover:text-brand-bright"></i>
+                </div>
+                <h4 class="text-[10px] sm:text-sm md:text-base font-bold font-display text-brand-dark group-hover:text-white mb-1 uppercase leading-tight">
+                  Attention to Detail
+                </h4>
+                <p class="text-[8px] sm:text-xs text-brand-muted group-hover:text-slate-300 leading-tight">
+                  Every element is carefully refined.
+                </p>
+              </div>
+            </div>
+
+            <!-- Box 05: Strategy -->
+            <div class="about-card group p-2.5 sm:p-5 md:p-6 rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-1.5 sm:mb-3">
+                  <span class="text-xs sm:text-sm font-headline font-black text-brand-violet group-hover:text-brand-bright font-mono">05</span>
+                  <i data-lucide="compass" class="w-3.5 h-3.5 sm:w-5 sm:h-5 text-brand-violet group-hover:text-brand-bright"></i>
+                </div>
+                <h4 class="text-[10px] sm:text-sm md:text-base font-bold font-display text-brand-dark group-hover:text-white mb-1 uppercase leading-tight">
+                  Strategy
+                </h4>
+                <p class="text-[8px] sm:text-xs text-brand-muted group-hover:text-slate-300 leading-tight">
+                  Design decisions driven by purpose.
+                </p>
+              </div>
+            </div>
+
+            <!-- Box 06: Client Focus -->
+            <div class="about-card group p-2.5 sm:p-5 md:p-6 rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-1.5 sm:mb-3">
+                  <span class="text-xs sm:text-sm font-headline font-black text-brand-violet group-hover:text-brand-bright font-mono">06</span>
+                  <i data-lucide="users" class="w-3.5 h-3.5 sm:w-5 sm:h-5 text-brand-violet group-hover:text-brand-bright"></i>
+                </div>
+                <h4 class="text-[10px] sm:text-sm md:text-base font-bold font-display text-brand-dark group-hover:text-white mb-1 uppercase leading-tight">
+                  Client Focus
+                </h4>
+                <p class="text-[8px] sm:text-xs text-brand-muted group-hover:text-slate-300 leading-tight">
+                  Design solutions built around your goals.
+                </p>
+              </div>
             </div>
 
           </div>
@@ -863,72 +680,72 @@
     <!-- ========================================== -->
     <!-- 5. CONTACT SECTION                         -->
     <!-- ========================================== -->
-    <section id="contact" class="py-24 relative px-4 sm:px-6 lg:px-8 border-t border-brand-border bg-brand-black">
+    <section id="contact" class="py-16 sm:py-24 relative px-4 sm:px-6 lg:px-8 border-t border-brand-softBorder bg-white">
       <div class="max-w-7xl mx-auto">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
           
           <!-- Contact Info Column -->
-          <div class="lg:col-span-5 space-y-8">
+          <div class="lg:col-span-5 space-y-6 sm:space-y-8">
             <div>
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-nearBlack border border-brand-border text-xs font-mono uppercase text-brand-orange tracking-widest mb-4">
-                <span class="w-1.5 h-1.5 rounded-full bg-brand-orange"></span> GET IN TOUCH
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-bgLight border border-brand-softBorder text-xs font-mono uppercase text-brand-violet tracking-widest mb-3 shadow-sm font-semibold">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-violet"></span> GET IN TOUCH
               </div>
-              <h2 class="text-3xl sm:text-5xl font-display font-black text-white uppercase tracking-tight mb-4">
-                LET'S CREATE SOMETHING <span class="text-brand-orange">DISTINCTIVE.</span>
+              <h2 class="text-3xl sm:text-5xl font-display font-black text-brand-dark uppercase tracking-tight mb-3">
+                LET'S CREATE SOMETHING <span class="text-brand-violet">DISTINCTIVE.</span>
               </h2>
-              <p class="text-slate-400 text-base leading-relaxed">
-                Have a project in mind? Let's turn your idea into a professional visual experience. Tell us what you're looking for and we'll discuss the ideal creative strategy.
+              <p class="text-brand-muted text-sm sm:text-base leading-relaxed">
+                Have a project in mind? Let's turn your idea into a professional visual experience. Tell us what you're looking for and let's discuss your next breakthrough.
               </p>
             </div>
 
-            <!-- Direct Contact Links -->
-            <div class="space-y-4">
+            <!-- Direct Contact Channels -->
+            <div class="space-y-3 sm:space-y-4">
               
               <!-- WhatsApp -->
-              <a href="https://wa.me/917004953962" target="_blank" rel="noopener noreferrer" class="group p-5 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-orange/60 transition-all flex items-center gap-4">
-                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform">
-                  <i data-lucide="message-circle" class="w-6 h-6"></i>
+              <a href="https://wa.me/917004953962" target="_blank" rel="noopener noreferrer" class="group p-4 sm:p-5 rounded-[18px] bg-brand-bgLight border border-brand-softBorder hover:border-brand-violet hover:shadow-md transition-all flex items-center gap-4">
+                <div class="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-600 group-hover:scale-110 transition-transform">
+                  <i data-lucide="message-circle" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <span class="text-[10px] font-mono uppercase text-brand-muted block">Direct WhatsApp</span>
-                  <span class="text-base font-bold text-white group-hover:text-brand-orange transition-colors">+91 7004953962</span>
+                  <span class="text-[10px] font-mono uppercase text-brand-muted block font-semibold">Direct WhatsApp</span>
+                  <span class="text-sm sm:text-base font-bold text-brand-dark group-hover:text-brand-violet transition-colors">+91 7004953962</span>
                 </div>
               </a>
 
               <!-- Email -->
-              <a href="mailto:slrgraphics.contact@gmail.com" class="group p-5 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-orange/60 transition-all flex items-center gap-4">
-                <div class="w-12 h-12 rounded-xl bg-brand-orangeMuted border border-brand-orange/30 flex items-center justify-center text-brand-orange group-hover:scale-110 transition-transform">
-                  <i data-lucide="mail" class="w-6 h-6"></i>
+              <a href="mailto:slrgraphics.contact@gmail.com" class="group p-4 sm:p-5 rounded-[18px] bg-brand-bgLight border border-brand-softBorder hover:border-brand-violet hover:shadow-md transition-all flex items-center gap-4">
+                <div class="w-11 h-11 rounded-xl bg-brand-violet/10 border border-brand-violet/20 flex items-center justify-center text-brand-violet group-hover:scale-110 transition-transform">
+                  <i data-lucide="mail" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <span class="text-[10px] font-mono uppercase text-brand-muted block">Official Email</span>
-                  <span class="text-base font-bold text-white group-hover:text-brand-orange transition-colors break-all">slrgraphics.contact@gmail.com</span>
+                  <span class="text-[10px] font-mono uppercase text-brand-muted block font-semibold">Official Email</span>
+                  <span class="text-sm sm:text-base font-bold text-brand-dark group-hover:text-brand-violet transition-colors break-all">slrgraphics.contact@gmail.com</span>
                 </div>
               </a>
 
               <!-- Instagram -->
-              <a href="https://instagram.com/slr_graphics" target="_blank" rel="noopener noreferrer" class="group p-5 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-orange/60 transition-all flex items-center gap-4">
-                <div class="w-12 h-12 rounded-xl bg-fuchsia-500/10 border border-fuchsia-500/20 flex items-center justify-center text-fuchsia-400 group-hover:scale-110 transition-transform">
-                  <i data-lucide="instagram" class="w-6 h-6"></i>
+              <a href="https://instagram.com/slr_graphics" target="_blank" rel="noopener noreferrer" class="group p-4 sm:p-5 rounded-[18px] bg-brand-bgLight border border-brand-softBorder hover:border-brand-violet hover:shadow-md transition-all flex items-center gap-4">
+                <div class="w-11 h-11 rounded-xl bg-fuchsia-500/10 border border-fuchsia-500/20 flex items-center justify-center text-fuchsia-600 group-hover:scale-110 transition-transform">
+                  <i data-lucide="instagram" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <span class="text-[10px] font-mono uppercase text-brand-muted block">Studio Instagram</span>
-                  <span class="text-base font-bold text-white group-hover:text-brand-orange transition-colors">@slr_graphics</span>
+                  <span class="text-[10px] font-mono uppercase text-brand-muted block font-semibold">Studio Instagram</span>
+                  <span class="text-sm sm:text-base font-bold text-brand-dark group-hover:text-brand-violet transition-colors">@slr_graphics</span>
                 </div>
               </a>
 
             </div>
 
-            <!-- Studio Meta Status -->
-            <div class="p-6 rounded-2xl bg-brand-nearBlack border border-white/5 space-y-2 font-mono text-xs">
-              <div class="flex items-center justify-between text-slate-400">
+            <!-- Studio Meta -->
+            <div class="p-4 sm:p-5 rounded-[18px] bg-brand-bgLight border border-brand-softBorder space-y-2 font-mono text-xs">
+              <div class="flex items-center justify-between text-brand-muted">
                 <span>Working Days</span>
-                <span class="text-white">Mon — Sat</span>
+                <span class="text-brand-dark font-bold">Mon — Sat</span>
               </div>
-              <div class="flex items-center justify-between text-slate-400">
+              <div class="flex items-center justify-between text-brand-muted">
                 <span>Response Time</span>
-                <span class="text-emerald-400">Within 2 to 4 Hours</span>
+                <span class="text-emerald-600 font-bold">Within 2 to 4 Hours</span>
               </div>
             </div>
 
@@ -936,66 +753,66 @@
 
           <!-- Project Inquiry Form -->
           <div class="lg:col-span-7">
-            <div class="p-8 sm:p-10 rounded-3xl bg-brand-card border border-brand-border shadow-2xl relative">
+            <div class="p-6 sm:p-10 rounded-[22px] bg-brand-bgLight border border-brand-dark shadow-lg relative">
               
-              <h3 class="text-2xl font-bold font-display text-white mb-2">Start Your Project</h3>
-              <p class="text-slate-400 text-sm mb-8">Fill in your requirements below for a tailored proposal.</p>
+              <h3 class="text-xl sm:text-2xl font-bold font-display text-brand-dark mb-1">Start Your Project</h3>
+              <p class="text-brand-muted text-xs sm:text-sm mb-6">Fill in your requirements below for a tailored proposal.</p>
 
-              <form id="inquiry-form" class="space-y-6">
+              <form id="inquiry-form" class="space-y-4 sm:space-y-5">
                 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <!-- Name -->
                   <div>
-                    <label for="name" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Name *</label>
-                    <input type="text" id="name" name="name" required placeholder="Your full name" class="w-full px-4 py-3.5 rounded-xl bg-brand-nearBlack border border-brand-border text-white placeholder-slate-600 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-all text-sm">
+                    <label for="name" class="block text-xs font-mono uppercase tracking-wider text-brand-dark font-bold mb-1.5">Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="Your full name" class="w-full px-4 py-3 rounded-xl bg-white border border-brand-softBorder text-brand-dark placeholder-slate-400 focus:outline-none focus:border-brand-violet focus:ring-1 focus:ring-brand-violet transition-all text-sm shadow-sm">
                   </div>
                   <!-- Email -->
                   <div>
-                    <label for="email" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Email *</label>
-                    <input type="email" id="email" name="email" required placeholder="name@domain.com" class="w-full px-4 py-3.5 rounded-xl bg-brand-nearBlack border border-brand-border text-white placeholder-slate-600 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-all text-sm">
+                    <label for="email" class="block text-xs font-mono uppercase tracking-wider text-brand-dark font-bold mb-1.5">Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="name@domain.com" class="w-full px-4 py-3 rounded-xl bg-white border border-brand-softBorder text-brand-dark placeholder-slate-400 focus:outline-none focus:border-brand-violet focus:ring-1 focus:ring-brand-violet transition-all text-sm shadow-sm">
                   </div>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <!-- Phone / WhatsApp -->
                   <div>
-                    <label for="phone" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Phone / WhatsApp *</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="+91 00000 00000" class="w-full px-4 py-3.5 rounded-xl bg-brand-nearBlack border border-brand-border text-white placeholder-slate-600 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-all text-sm">
+                    <label for="phone" class="block text-xs font-mono uppercase tracking-wider text-brand-dark font-bold mb-1.5">Phone / WhatsApp *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+91 00000 00000" class="w-full px-4 py-3 rounded-xl bg-white border border-brand-softBorder text-brand-dark placeholder-slate-400 focus:outline-none focus:border-brand-violet focus:ring-1 focus:ring-brand-violet transition-all text-sm shadow-sm">
                   </div>
                   <!-- Company / Brand -->
                   <div>
-                    <label for="company" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Company / Brand</label>
-                    <input type="text" id="company" name="company" placeholder="Brand or organization" class="w-full px-4 py-3.5 rounded-xl bg-brand-nearBlack border border-brand-border text-white placeholder-slate-600 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-all text-sm">
+                    <label for="company" class="block text-xs font-mono uppercase tracking-wider text-brand-dark font-bold mb-1.5">Company / Brand</label>
+                    <input type="text" id="company" name="company" placeholder="Brand or organization" class="w-full px-4 py-3 rounded-xl bg-white border border-brand-softBorder text-brand-dark placeholder-slate-400 focus:outline-none focus:border-brand-violet focus:ring-1 focus:ring-brand-violet transition-all text-sm shadow-sm">
                   </div>
                 </div>
 
                 <!-- Project Type -->
                 <div>
-                  <label for="project-type" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Project Type *</label>
-                  <select id="project-type" name="projectType" required class="w-full px-4 py-3.5 rounded-xl bg-brand-nearBlack border border-brand-border text-white focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-all text-sm">
-                    <option value="" disabled selected class="bg-brand-nearBlack text-slate-500">Select project category</option>
-                    <option value="Brand Identity" class="bg-brand-nearBlack text-white">01 — Brand Identity (Logos, Guidelines)</option>
-                    <option value="Social Media Design" class="bg-brand-nearBlack text-white">02 — Social Media Design (Posts, Carousels)</option>
-                    <option value="Marketing & Advertising" class="bg-brand-nearBlack text-white">03 — Marketing & Advertising (Ads, Posters)</option>
-                    <option value="Print & Packaging" class="bg-brand-nearBlack text-white">04 — Print & Packaging (Boxes, Labels)</option>
-                    <option value="UI/UX & Website" class="bg-brand-nearBlack text-white">05 — UI/UX & Website Design</option>
-                    <option value="Custom Graphic Design" class="bg-brand-nearBlack text-white">06 — Custom Graphic Design</option>
+                  <label for="project-type" class="block text-xs font-mono uppercase tracking-wider text-brand-dark font-bold mb-1.5">Project Type *</label>
+                  <select id="project-type" name="projectType" required class="w-full px-4 py-3 rounded-xl bg-white border border-brand-softBorder text-brand-dark focus:outline-none focus:border-brand-violet focus:ring-1 focus:ring-brand-violet transition-all text-sm shadow-sm">
+                    <option value="" disabled selected class="text-slate-400">Select project category</option>
+                    <option value="Brand Identity">01 — Brand Identity (Logos, Guidelines)</option>
+                    <option value="Social Media Design">02 — Social Media Design (Posts, Carousels)</option>
+                    <option value="Marketing & Advertising">03 — Marketing & Advertising (Ads, Posters)</option>
+                    <option value="Print & Packaging">04 — Print & Packaging (Boxes, Labels)</option>
+                    <option value="UI/UX & Website">05 — UI/UX & Website Design</option>
+                    <option value="Custom Graphic Design">06 — Custom Graphic Design</option>
                   </select>
                 </div>
 
                 <!-- Project Description -->
                 <div>
-                  <label for="message" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Project Description *</label>
-                  <textarea id="message" name="message" rows="4" required placeholder="Describe your vision, requirements, desired timeline, or scope..." class="w-full px-4 py-3.5 rounded-xl bg-brand-nearBlack border border-brand-border text-white placeholder-slate-600 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-all text-sm resize-none"></textarea>
+                  <label for="message" class="block text-xs font-mono uppercase tracking-wider text-brand-dark font-bold mb-1.5">Project Description *</label>
+                  <textarea id="message" name="message" rows="3" required placeholder="Describe your vision, requirements, desired timeline, or scope..." class="w-full px-4 py-3 rounded-xl bg-white border border-brand-softBorder text-brand-dark placeholder-slate-400 focus:outline-none focus:border-brand-violet focus:ring-1 focus:ring-brand-violet transition-all text-sm resize-none shadow-sm"></textarea>
                 </div>
 
                 <!-- Actions -->
-                <div class="flex flex-col sm:flex-row items-center gap-4 pt-2">
-                  <button type="submit" class="w-full sm:w-auto flex-1 py-4 px-8 rounded-xl font-bold tracking-wider text-black bg-brand-orange hover:bg-brand-orangeHover transition-all duration-300 shadow-[0_0_20px_rgba(255,85,0,0.4)] flex items-center justify-center gap-2">
+                <div class="flex flex-col sm:flex-row items-center gap-3 pt-2">
+                  <button type="submit" class="w-full sm:w-auto flex-1 py-3.5 px-6 rounded-xl font-bold tracking-wider text-white bg-brand-violet hover:bg-brand-bright transition-all duration-300 shadow-[0_4px_16px_rgba(124,58,237,0.3)] flex items-center justify-center gap-2">
                     <i data-lucide="send" class="w-4 h-4"></i>
                     <span>SEND INQUIRY</span>
                   </button>
-                  <button type="button" id="send-whatsapp-btn" class="w-full sm:w-auto py-4 px-6 rounded-xl font-semibold text-white bg-emerald-600 hover:bg-emerald-500 transition-all flex items-center justify-center gap-2 text-sm">
+                  <button type="button" id="send-whatsapp-btn" class="w-full sm:w-auto py-3.5 px-5 rounded-xl font-semibold text-white bg-emerald-600 hover:bg-emerald-500 transition-all flex items-center justify-center gap-2 text-sm shadow-sm">
                     <i data-lucide="message-circle" class="w-4 h-4"></i>
                     <span>Send via WhatsApp</span>
                   </button>
@@ -1004,8 +821,8 @@
               </form>
 
               <!-- Success Alert -->
-              <div id="form-success" class="hidden mt-6 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/40 text-emerald-300 text-sm flex items-center gap-3">
-                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 flex-shrink-0"></i>
+              <div id="form-success" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-800 text-xs sm:text-sm flex items-center gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600 flex-shrink-0"></i>
                 <span>Thank you! Your project inquiry is prepared. We will connect with you shortly.</span>
               </div>
 
@@ -1020,57 +837,57 @@
   </main>
 
   <!-- ========================================== -->
-  <!-- FOOTER                                     -->
+  <!-- FOOTER (DARK PURPLE BACKGROUND)            -->
   <!-- ========================================== -->
-  <footer class="bg-brand-nearBlack border-t border-brand-border pt-16 pb-12 relative px-4 sm:px-6 lg:px-8">
+  <footer class="bg-brand-dark text-white pt-14 pb-10 relative px-4 sm:px-6 lg:px-8 border-t border-brand-dark">
     <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-14 border-b border-brand-border">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-12 pb-10 border-b border-white/10">
         
         <!-- Studio Identity -->
-        <div class="lg:col-span-5 space-y-4">
+        <div class="lg:col-span-5 space-y-3">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-black border border-brand-border flex items-center justify-center p-1.5">
+            <div class="w-9 h-9 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center p-1.5">
               <img src="assets/slr-logo.png" alt="SLR Logo" class="w-full h-full object-contain">
             </div>
             <span class="font-display font-extrabold text-xl text-white tracking-wider">
-              SLR <span class="text-brand-orange">GRAPHICS</span>
+              SLR <span class="text-brand-bright">GRAPHICS</span>
             </span>
           </div>
-          <p class="text-brand-orange font-display font-medium text-sm italic tracking-wide">
+          <p class="text-brand-bright font-display font-medium text-xs sm:text-sm italic tracking-wide">
             Designing Visuals. Building Identities.
           </p>
-          <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-sm">
             Creative graphic design studio focused on creating professional, modern, and memorable visual identities for brands, creators, and businesses worldwide.
           </p>
         </div>
 
         <!-- 5 Nav Links -->
         <div class="lg:col-span-3">
-          <h4 class="text-xs font-mono uppercase tracking-widest text-white font-bold mb-4">Navigation</h4>
-          <ul class="space-y-2.5 text-sm text-slate-400 font-medium">
-            <li><a href="#home" class="hover:text-brand-orange transition-colors">Home</a></li>
-            <li><a href="#services" class="hover:text-brand-orange transition-colors">Services</a></li>
-            <li><a href="#portfolio" class="hover:text-brand-orange transition-colors">Portfolio</a></li>
-            <li><a href="#about" class="hover:text-brand-orange transition-colors">About</a></li>
-            <li><a href="#contact" class="hover:text-brand-orange transition-colors">Contact</a></li>
+          <h4 class="text-xs font-mono uppercase tracking-widest text-white font-bold mb-3">Navigation</h4>
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-300 font-medium">
+            <li><a href="#home" class="hover:text-brand-bright transition-colors">Home</a></li>
+            <li><a href="#services" class="hover:text-brand-bright transition-colors">Services</a></li>
+            <li><a href="#portfolio" class="hover:text-brand-bright transition-colors">Portfolio</a></li>
+            <li><a href="#about" class="hover:text-brand-bright transition-colors">About</a></li>
+            <li><a href="#contact" class="hover:text-brand-bright transition-colors">Contact</a></li>
           </ul>
         </div>
 
         <!-- Contact Channels -->
-        <div class="lg:col-span-4 space-y-3">
-          <h4 class="text-xs font-mono uppercase tracking-widest text-white font-bold mb-4">Let's Connect</h4>
-          <div class="space-y-2.5 text-sm text-slate-400 font-mono">
+        <div class="lg:col-span-4 space-y-2.5">
+          <h4 class="text-xs font-mono uppercase tracking-widest text-white font-bold mb-3">Let's Connect</h4>
+          <div class="space-y-2 text-xs sm:text-sm text-slate-300 font-mono">
             <div class="flex items-center gap-2.5">
-              <i data-lucide="mail" class="w-4 h-4 text-brand-orange"></i>
-              <a href="mailto:slrgraphics.contact@gmail.com" class="text-white hover:text-brand-orange transition-colors">slrgraphics.contact@gmail.com</a>
+              <i data-lucide="mail" class="w-4 h-4 text-brand-bright"></i>
+              <a href="mailto:slrgraphics.contact@gmail.com" class="text-white hover:text-brand-bright transition-colors break-all">slrgraphics.contact@gmail.com</a>
             </div>
             <div class="flex items-center gap-2.5">
               <i data-lucide="phone" class="w-4 h-4 text-emerald-400"></i>
-              <a href="https://wa.me/917004953962" target="_blank" class="text-white hover:text-brand-orange transition-colors">+91 7004953962</a>
+              <a href="https://wa.me/917004953962" target="_blank" class="text-white hover:text-brand-bright transition-colors">+91 7004953962</a>
             </div>
             <div class="flex items-center gap-2.5">
               <i data-lucide="instagram" class="w-4 h-4 text-fuchsia-400"></i>
-              <a href="https://instagram.com/slr_graphics" target="_blank" class="text-white hover:text-brand-orange transition-colors">@slr_graphics</a>
+              <a href="https://instagram.com/slr_graphics" target="_blank" class="text-white hover:text-brand-bright transition-colors">@slr_graphics</a>
             </div>
           </div>
         </div>
@@ -1078,13 +895,13 @@
       </div>
 
       <!-- Copyright Bar -->
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-3">
         <div>
-          © 2026 <strong class="text-slate-300">SLR GRAPHICS</strong>. All Rights Reserved.
+          © 2026 <strong class="text-white">SLR GRAPHICS</strong>. All Rights Reserved.
         </div>
-        <div class="flex items-center gap-6">
-          <span>Premium Creative Agency</span>
-          <a href="#home" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition-colors" title="Back to top">
+        <div class="flex items-center gap-4">
+          <span>White + Purple Design Studio</span>
+          <a href="#home" class="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white transition-colors" title="Back to top">
             <i data-lucide="arrow-up" class="w-4 h-4"></i>
           </a>
         </div>
@@ -1093,25 +910,25 @@
   </footer>
 
   <!-- FLOATING WHATSAPP BUTTON -->
-  <a href="https://wa.me/917004953962?text=Hello%20SLR%20GRAPHICS,%20I%20would%20like%20to%20discuss%20a%20design%20project." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 p-3.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white shadow-[0_0_25px_rgba(16,185,129,0.45)] transition-all duration-300 hover:scale-110 flex items-center justify-center group" title="Chat on WhatsApp (+91 7004953962)">
+  <a href="https://wa.me/917004953962?text=Hello%20SLR%20GRAPHICS,%20I%20would%20like%20to%20discuss%20a%20design%20project." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 p-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white shadow-[0_6px_20px_rgba(16,185,129,0.4)] transition-all duration-300 hover:scale-110 flex items-center justify-center group" title="Chat on WhatsApp (+91 7004953962)">
     <i data-lucide="message-circle" class="w-6 h-6"></i>
     <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-500 ease-in-out font-medium text-xs pl-0 group-hover:pl-2">
       Chat With SLR
     </span>
   </a>
 
-  <!-- DEDICATED FULL-SCREEN / MODAL PROJECT DETAIL VIEW (MOBILE & DESKTOP) -->
-  <div id="project-modal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-brand-black/95 backdrop-blur-xl">
-    <div class="min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8">
-      <div class="relative w-full max-w-4xl bg-brand-card border border-brand-border rounded-3xl p-6 sm:p-10 shadow-2xl my-8">
+  <!-- FULL-SCREEN MOBILE & DESKTOP PROJECT DETAIL VIEW -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-brand-dark/95 backdrop-blur-xl">
+    <div class="min-h-screen flex items-center justify-center p-3 sm:p-6 lg:p-8">
+      <div class="relative w-full max-w-4xl bg-white text-brand-dark border border-brand-dark rounded-[22px] p-5 sm:p-10 shadow-2xl my-4 sm:my-8">
         
         <!-- Sticky / Top Close & Back to Portfolio Bar -->
-        <div class="flex items-center justify-between pb-6 mb-6 border-b border-white/10">
-          <button onclick="closeProjectModal()" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-brand-orange hover:text-black text-slate-200 transition-all text-xs font-bold uppercase tracking-wider">
+        <div class="flex items-center justify-between pb-4 mb-5 border-b border-brand-softBorder">
+          <button onclick="closeProjectModal()" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-brand-dark/5 hover:bg-brand-violet hover:text-white text-brand-dark transition-all text-xs font-bold uppercase tracking-wider">
             <i data-lucide="arrow-left" class="w-4 h-4"></i>
             <span>BACK TO PORTFOLIO</span>
           </button>
-          <button onclick="closeProjectModal()" class="p-2 rounded-full bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition-colors" title="Close">
+          <button onclick="closeProjectModal()" class="p-2 rounded-full bg-brand-dark/5 hover:bg-brand-dark/10 text-brand-muted hover:text-brand-dark transition-colors" title="Close">
             <i data-lucide="x" class="w-5 h-5"></i>
           </button>
         </div>
