@@ -1,6 +1,6 @@
 # SLR GRAPHICS — Modern Creative Design Studio Website
 
-Official website for **SLR GRAPHICS** — a modern creative design studio positioning brands through distinctive visual identities, marketing collateral, advertising creatives, and digital experiences.
+Official website for **SLR GRAPHICS** — a modern creative design studio positioning brands through distinctive visual identities, social media campaigns, print & packaging, and digital interfaces.
 
 ---
 
@@ -8,82 +8,35 @@ Official website for **SLR GRAPHICS** — a modern creative design studio positi
 
 | Element | Specification | Hex / Value |
 | :--- | :--- | :--- |
-| **Dark Purple** | Primary Brand Surface | `#1B1035` |
-| **Violet** | Primary Accent / Gradient Stop | `#7C3AED` |
-| **Bright Violet** | Neon Highlights / Badges | `#A855F7` |
-| **Canvas** | Deep Midnight Background | `#080411` |
-| **White** | High-Contrast Typography | `#FFFFFF` |
-| **Typography** | Headlines & Badges | `Space Grotesk`, `Syne` |
-| **Typography** | Body & Interfaces | `Plus Jakarta Sans` |
+| **Canvas** | Deep Black Background | `#0A0A0A` |
+| **Surface** | Dark Studio Surface | `#111111` |
+| **Cards** | Elevated Dark Card | `#161616` |
+| **Accent Color** | Bright Studio Orange | `#FF5500` |
+| **Typography** | Bold Display Headings | `Space Grotesk`, `Syne` |
+| **Typography** | Clean Editorial Body | `Plus Jakarta Sans` |
+| **Borders** | Subtle Luxury Outlines | `rgba(255, 255, 255, 0.08)` |
 
 ---
 
-## 📂 Project Architecture
+## 🧭 Main Navigation (5 Core Sections Only)
 
-```
-slr-graphics-studio/
-├── assets/
-│   └── slr-logo.png         # High-resolution 3D ribbon logo of SLR GRAPHICS
-├── index.html               # Main studio landing page (Hero, Services, About, Approach, Work, Contact, Footer)
-├── styles.css               # Studio-grade dark theme, glassmorphism, glowing micro-animations
-├── script.js                # Interactive portfolio filtering, case study modals, WhatsApp auto-dispatch
-└── README.md                # Documentation and maintenance guide
-```
+1. **HOME**: Hero section with *“CREATE. DESIGN. STAND OUT.”*, creative visual showcase, brand tagline, and key studio metrics.
+2. **SERVICES**: *“WHAT WE DO”* featuring **6 large service cards** with orange circular arrows and micro-interactions.
+3. **PORTFOLIO**: The visual centerpiece displaying **EXACTLY 6 featured project showcases** with interactive full-screen case study views.
+4. **ABOUT**: *“DESIGN WITH PURPOSE.”* with studio philosophy and **4 key principles** (Creative Thinking, Professional Design, Brand Consistency, Attention to Detail).
+5. **CONTACT**: *“LET'S CREATE SOMETHING DISTINCTIVE.”* with direct WhatsApp (`+91 7004953962`), email (`slrgraphics.contact@gmail.com`), Instagram (`@slr_graphics`), and full inquiry form.
 
 ---
 
-## 🚀 How to Open and View
+## 📱 Mobile-First Experience
 
-1. Navigate to the project folder:
-   `C:\Users\Hp\.gemini\antigravity\scratch\slr-graphics-studio\`
-2. Double-click **`index.html`** or right-click and choose **"Open with Google Chrome"** (or Microsoft Edge, Safari, Firefox).
-3. The site is zero-dependency and runs entirely offline or hosted on any CDN/server (Netlify, Vercel, GitHub Pages, or cPanel).
+- Single-column card flow optimized for touch screens.
+- **Portfolio interaction**: Tap any project card → Opens dedicated full-screen Case Study modal → Tap "Back to Portfolio" to return.
+- Zero horizontal overflow, high-contrast readable typography, and sticky frosted navigation bar.
 
 ---
 
-## 💼 Core Sections Built
+## 🚀 Repository & Live Site
 
-1. **Header & Navigation**: Fixed frosted glass bar with brand logo, interactive navigation links, quick WhatsApp button, and mobile slide drawer.
-2. **Hero Section**:
-   - Headline: *CREATE. DESIGN. STAND OUT.*
-   - Subheadline: *We transform ideas into powerful visual experiences that make brands memorable.*
-   - CTA: *START A PROJECT* & *EXPLORE SELECTED WORK*
-   - Brand taglines: *GIVE YOUR BRAND A VISUAL IDENTITY* & *DESIGNING VISUALS. BUILDING IDENTITIES.*
-3. **Brand Positioning & Quick Metrics**:
-   - Highlighting creative thinking, strategic design, and visual consistency.
-4. **What We Do (9 Featured Services)**:
-   - Brand Identity (Logos, colors, typography, brand guidelines)
-   - Marketing Collateral (Brochures, flyers, business cards, company profiles)
-   - Advertising Creatives (Ad designs, promotional posters, campaigns, banners)
-   - Digital & Social Media Design (Instagram, Facebook, YouTube, website graphics)
-   - Print & Packaging Design (Packaging, labels, menus, stationery, print materials)
-   - UI & UX Design and Development
-   - Website Handling
-   - SEO (Search Engine Optimization)
-   - Custom Graphic Design
-5. **About SLR GRAPHICS**:
-   - Philosophy: *DESIGN WITH PURPOSE.*
-   - Brand pillars: Clear, Distinctive, Professional, Consistent.
-6. **Our Approach (5-Step Creative Journey)**:
-   - `01 — DISCOVER`: Understanding brand, goals, and audience.
-   - `02 — DEFINE`: Creative direction, mood boards, and visual style.
-   - `03 — DESIGN`: Polished visual communication.
-   - `04 — REFINE`: Testing and fine-tuning.
-   - `05 — DELIVER`: Production-ready delivery.
-7. **Why Choose SLR GRAPHICS**:
-   - Creative Thinking, Professional Design, Brand Consistency, Detail-Focused, Client-Focused, Versatile Design.
-8. **Interactive Selected Work (Portfolio)**:
-   - Real interactive filter tabs: *All Work, Brand Identity, Social Media, Posters, Advertising, Packaging*.
-   - Clickable cards that launch detailed **Case Study Modals** with client background, design objective, creative direction, palette, and key deliverables.
-9. **Brand Statement Impact Banner**:
-   - *"YOUR BRAND DESERVES MORE THAN JUST A DESIGN. SLR GRAPHICS turns ideas into visuals that people remember."*
-10. **Work With Us CTA**:
-    - High-impact callout with instant project dispatch buttons.
-11. **Interactive Contact Section & Form**:
-    - Form fields: Name, Email, Phone, Company/Brand, Project Type, Description.
-    - Dual actions: Direct form inquiry + instant one-click WhatsApp prefilled message generation.
-12. **Studio Footer & Social Links**:
-    - Instagram: `@slr_graphics`
-    - WhatsApp: `+91 7004953962`
-    - Official Email: `slrgraphics.contact@gmail.com`
-    - Copyright: `© 2026 SLR GRAPHICS. All Rights Reserved.`
+- **GitHub Repository**: [https://github.com/syedlaraib0313-gif/slrfinal](https://github.com/syedlaraib0313-gif/slrfinal)
+- **Live Demo (GitHub Pages)**: [https://syedlaraib0313-gif.github.io/slrfinal/](https://syedlaraib0313-gif.github.io/slrfinal/)
