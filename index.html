@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
@@ -156,15 +156,11 @@
               SLR GRAPHICS creates professional, modern and memorable visual identities for brands, businesses, creators and individuals.
             </p>
 
-            <!-- Two CTA Buttons -->
+            <!-- Single CTA Button: START A PROJECT only -->
             <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
               <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full text-sm font-bold tracking-wider text-white bg-brand-violet hover:bg-brand-bright transition-all duration-300 shadow-[0_6px_20px_rgba(124,58,237,0.3)] hover:shadow-[0_8px_28px_rgba(168,85,247,0.5)] hover:-translate-y-0.5 inline-flex items-center justify-center gap-2.5">
                 <span>START A PROJECT</span>
                 <i data-lucide="arrow-right" class="w-4 h-4"></i>
-              </a>
-              <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 rounded-full text-sm font-semibold tracking-wider text-brand-dark bg-white hover:bg-brand-dark hover:text-white border border-brand-dark transition-all duration-300 inline-flex items-center justify-center gap-2 shadow-sm">
-                <span>VIEW PORTFOLIO</span>
-                <i data-lucide="arrow-down-right" class="w-4 h-4 text-brand-violet"></i>
               </a>
             </div>
 
@@ -249,165 +245,306 @@
     </section>
 
     <!-- ========================================== -->
-    <!-- 2. SERVICES SECTION (3x2 GRID ON MOBILE)   -->
+    <!-- 2. SERVICES SECTION - INTERACTIVE 8 CARDS  -->
     <!-- ========================================== -->
     <section id="services" class="py-16 sm:py-24 relative px-4 sm:px-6 lg:px-8 border-t border-brand-softBorder bg-brand-bgLight">
       <div class="max-w-7xl mx-auto">
-        
+
         <!-- Section Header -->
-        <div class="max-w-3xl mb-10 sm:mb-16">
+        <div class="max-w-3xl mb-10 sm:mb-14">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-brand-softBorder text-xs font-mono uppercase text-brand-violet tracking-widest mb-3 shadow-sm font-semibold">
             <span class="w-1.5 h-1.5 rounded-full bg-brand-violet"></span> WHAT WE DO
           </div>
           <h2 class="text-3xl sm:text-5xl font-display font-black text-brand-dark uppercase tracking-tight mb-3">
-            WHAT WE <span class="text-brand-violet">DO.</span>
+            OUR <span class="text-brand-violet">SERVICES.</span>
           </h2>
-          <p class="text-brand-muted text-sm sm:text-lg leading-relaxed">
-            Creative solutions built to make your brand look professional, consistent and memorable.
+          <p class="text-brand-muted text-sm sm:text-lg leading-relaxed max-w-2xl">
+            Complete creative, digital and branding solutions designed to build, promote and grow your brand.
           </p>
         </div>
 
-        <!-- EXACTLY 6 SERVICE CARDS: 3x2 ON MOBILE, 3-COL ON DESKTOP -->
-        <div class="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 lg:gap-8">
-          
+        <!-- 8 SERVICE CARDS: 2-col mobile / 4-col desktop -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-5" id="services-grid">
+
           <!-- Card 01: Brand Identity -->
-          <div class="service-card group p-2.5 sm:p-5 md:p-7 rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-1.5 sm:mb-4">
-                <span class="text-xs sm:text-base md:text-xl font-headline font-black text-brand-violet group-hover:text-brand-bright font-mono">01</span>
-                <div class="w-5 h-5 sm:w-8 sm:h-8 rounded-full bg-brand-violet/10 group-hover:bg-brand-bright group-hover:text-brand-dark text-brand-violet flex items-center justify-center transition-colors">
-                  <i data-lucide="fingerprint" class="w-3 h-3 sm:w-4 sm:h-4"></i>
+          <div class="slr-service-card" data-service="01">
+            <div class="slr-card-front rounded-[16px] sm:rounded-[20px] bg-white border border-brand-dark p-4 sm:p-6 cursor-pointer shadow-sm hover:shadow-md hover:border-brand-violet hover:bg-purple-50/60 transition-all duration-200 flex flex-col min-h-[140px] sm:min-h-[170px]" onclick="slrToggleService('01')">
+              <div class="flex items-start justify-between mb-3 sm:mb-4">
+                <span class="text-2xl sm:text-3xl font-headline font-black text-brand-violet/70 font-mono leading-none">01</span>
+                <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-brand-violet/10 border border-brand-violet/20 flex items-center justify-center text-brand-violet flex-shrink-0">
+                  <i data-lucide="fingerprint" class="w-4 h-4"></i>
                 </div>
               </div>
-              <h3 class="text-[11px] sm:text-base md:text-xl font-bold font-display text-brand-dark group-hover:text-white mb-1 leading-tight sm:leading-snug">
-                Brand Identity
-              </h3>
-              <p class="text-[9px] sm:text-xs md:text-sm text-brand-muted group-hover:text-slate-300 leading-tight sm:leading-relaxed">
-                Logos, visual identity, colors & typography.
-              </p>
+              <h3 class="font-display font-black text-brand-dark text-sm sm:text-base md:text-lg leading-tight mt-auto">BRAND IDENTITY</h3>
+              <div class="flex items-center gap-1 mt-2.5 text-[10px] sm:text-xs font-mono font-semibold text-brand-violet">
+                <span>EXPLORE</span>
+                <i data-lucide="chevron-right" class="w-3 h-3"></i>
+              </div>
             </div>
-            <div class="hidden sm:block pt-3 mt-3 border-t border-brand-softBorder group-hover:border-white/10">
-              <span class="text-[10px] md:text-xs font-bold text-brand-violet group-hover:text-brand-bright inline-flex items-center gap-1">
-                Explore <i data-lucide="chevron-right" class="w-3 h-3"></i>
-              </span>
+            <div class="slr-card-open hidden rounded-[16px] sm:rounded-[20px] bg-brand-dark border border-brand-violet/40 p-4 sm:p-6 shadow-xl flex-col min-h-[140px] sm:min-h-[170px]">
+              <div class="flex items-start justify-between mb-3">
+                <span class="text-[10px] font-mono font-bold text-brand-bright tracking-widest">01</span>
+                <button onclick="slrCloseService('01')" class="w-7 h-7 rounded-full bg-white/10 hover:bg-brand-bright/20 flex items-center justify-center text-white/60 hover:text-brand-bright transition-colors flex-shrink-0" aria-label="Close">
+                  <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+              <h3 class="font-display font-black text-white text-sm sm:text-base leading-tight mb-2">BRAND IDENTITY</h3>
+              <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed mb-3">Build a strong and consistent visual identity that makes your brand recognizable and memorable.</p>
+              <ul class="space-y-1.5">
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Logos</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Colors</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Typography</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Brand Guidelines</li>
+              </ul>
             </div>
           </div>
 
-          <!-- Card 02: Social Media -->
-          <div class="service-card group p-2.5 sm:p-5 md:p-7 rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-1.5 sm:mb-4">
-                <span class="text-xs sm:text-base md:text-xl font-headline font-black text-brand-violet group-hover:text-brand-bright font-mono">02</span>
-                <div class="w-5 h-5 sm:w-8 sm:h-8 rounded-full bg-brand-violet/10 group-hover:bg-brand-bright group-hover:text-brand-dark text-brand-violet flex items-center justify-center transition-colors">
-                  <i data-lucide="share-2" class="w-3 h-3 sm:w-4 sm:h-4"></i>
+          <!-- Card 02: Marketing Collateral -->
+          <div class="slr-service-card" data-service="02">
+            <div class="slr-card-front rounded-[16px] sm:rounded-[20px] bg-white border border-brand-dark p-4 sm:p-6 cursor-pointer shadow-sm hover:shadow-md hover:border-brand-violet hover:bg-purple-50/60 transition-all duration-200 flex flex-col min-h-[140px] sm:min-h-[170px]" onclick="slrToggleService('02')">
+              <div class="flex items-start justify-between mb-3 sm:mb-4">
+                <span class="text-2xl sm:text-3xl font-headline font-black text-brand-violet/70 font-mono leading-none">02</span>
+                <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-brand-violet/10 border border-brand-violet/20 flex items-center justify-center text-brand-violet flex-shrink-0">
+                  <i data-lucide="file-text" class="w-4 h-4"></i>
                 </div>
               </div>
-              <h3 class="text-[11px] sm:text-base md:text-xl font-bold font-display text-brand-dark group-hover:text-white mb-1 leading-tight sm:leading-snug">
-                Social Media
-              </h3>
-              <p class="text-[9px] sm:text-xs md:text-sm text-brand-muted group-hover:text-slate-300 leading-tight sm:leading-relaxed">
-                Posts, carousels, stories & viral campaigns.
-              </p>
+              <h3 class="font-display font-black text-brand-dark text-sm sm:text-base md:text-lg leading-tight mt-auto">MARKETING COLLATERAL</h3>
+              <div class="flex items-center gap-1 mt-2.5 text-[10px] sm:text-xs font-mono font-semibold text-brand-violet">
+                <span>EXPLORE</span>
+                <i data-lucide="chevron-right" class="w-3 h-3"></i>
+              </div>
             </div>
-            <div class="hidden sm:block pt-3 mt-3 border-t border-brand-softBorder group-hover:border-white/10">
-              <span class="text-[10px] md:text-xs font-bold text-brand-violet group-hover:text-brand-bright inline-flex items-center gap-1">
-                Explore <i data-lucide="chevron-right" class="w-3 h-3"></i>
-              </span>
+            <div class="slr-card-open hidden rounded-[16px] sm:rounded-[20px] bg-brand-dark border border-brand-violet/40 p-4 sm:p-6 shadow-xl flex-col min-h-[140px] sm:min-h-[170px]">
+              <div class="flex items-start justify-between mb-3">
+                <span class="text-[10px] font-mono font-bold text-brand-bright tracking-widest">02</span>
+                <button onclick="slrCloseService('02')" class="w-7 h-7 rounded-full bg-white/10 hover:bg-brand-bright/20 flex items-center justify-center text-white/60 hover:text-brand-bright transition-colors flex-shrink-0" aria-label="Close">
+                  <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+              <h3 class="font-display font-black text-white text-sm sm:text-base leading-tight mb-2">MARKETING COLLATERAL</h3>
+              <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed mb-3">Professional marketing materials designed to communicate your brand clearly across print and digital touchpoints.</p>
+              <ul class="space-y-1.5">
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Brochures</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Flyers</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Business Cards</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Company Profiles</li>
+              </ul>
             </div>
           </div>
 
-          <!-- Card 03: Advertising -->
-          <div class="service-card group p-2.5 sm:p-5 md:p-7 rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-1.5 sm:mb-4">
-                <span class="text-xs sm:text-base md:text-xl font-headline font-black text-brand-violet group-hover:text-brand-bright font-mono">03</span>
-                <div class="w-5 h-5 sm:w-8 sm:h-8 rounded-full bg-brand-violet/10 group-hover:bg-brand-bright group-hover:text-brand-dark text-brand-violet flex items-center justify-center transition-colors">
-                  <i data-lucide="megaphone" class="w-3 h-3 sm:w-4 sm:h-4"></i>
+          <!-- Card 03: Advertising Creatives -->
+          <div class="slr-service-card" data-service="03">
+            <div class="slr-card-front rounded-[16px] sm:rounded-[20px] bg-white border border-brand-dark p-4 sm:p-6 cursor-pointer shadow-sm hover:shadow-md hover:border-brand-violet hover:bg-purple-50/60 transition-all duration-200 flex flex-col min-h-[140px] sm:min-h-[170px]" onclick="slrToggleService('03')">
+              <div class="flex items-start justify-between mb-3 sm:mb-4">
+                <span class="text-2xl sm:text-3xl font-headline font-black text-brand-violet/70 font-mono leading-none">03</span>
+                <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-brand-violet/10 border border-brand-violet/20 flex items-center justify-center text-brand-violet flex-shrink-0">
+                  <i data-lucide="megaphone" class="w-4 h-4"></i>
                 </div>
               </div>
-              <h3 class="text-[11px] sm:text-base md:text-xl font-bold font-display text-brand-dark group-hover:text-white mb-1 leading-tight sm:leading-snug">
-                Advertising
-              </h3>
-              <p class="text-[9px] sm:text-xs md:text-sm text-brand-muted group-hover:text-slate-300 leading-tight sm:leading-relaxed">
-                Ad creatives, promotional posters & banners.
-              </p>
+              <h3 class="font-display font-black text-brand-dark text-sm sm:text-base md:text-lg leading-tight mt-auto">ADVERTISING CREATIVES</h3>
+              <div class="flex items-center gap-1 mt-2.5 text-[10px] sm:text-xs font-mono font-semibold text-brand-violet">
+                <span>EXPLORE</span>
+                <i data-lucide="chevron-right" class="w-3 h-3"></i>
+              </div>
             </div>
-            <div class="hidden sm:block pt-3 mt-3 border-t border-brand-softBorder group-hover:border-white/10">
-              <span class="text-[10px] md:text-xs font-bold text-brand-violet group-hover:text-brand-bright inline-flex items-center gap-1">
-                Explore <i data-lucide="chevron-right" class="w-3 h-3"></i>
-              </span>
+            <div class="slr-card-open hidden rounded-[16px] sm:rounded-[20px] bg-brand-dark border border-brand-violet/40 p-4 sm:p-6 shadow-xl flex-col min-h-[140px] sm:min-h-[170px]">
+              <div class="flex items-start justify-between mb-3">
+                <span class="text-[10px] font-mono font-bold text-brand-bright tracking-widest">03</span>
+                <button onclick="slrCloseService('03')" class="w-7 h-7 rounded-full bg-white/10 hover:bg-brand-bright/20 flex items-center justify-center text-white/60 hover:text-brand-bright transition-colors flex-shrink-0" aria-label="Close">
+                  <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+              <h3 class="font-display font-black text-white text-sm sm:text-base leading-tight mb-2">ADVERTISING CREATIVES</h3>
+              <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed mb-3">Creative advertising visuals designed to capture attention and communicate your campaign message effectively.</p>
+              <ul class="space-y-1.5">
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Ad Designs</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Promotional Posters</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Campaigns</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Banners</li>
+              </ul>
             </div>
           </div>
 
-          <!-- Card 04: Print & Packaging -->
-          <div class="service-card group p-2.5 sm:p-5 md:p-7 rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-1.5 sm:mb-4">
-                <span class="text-xs sm:text-base md:text-xl font-headline font-black text-brand-violet group-hover:text-brand-bright font-mono">04</span>
-                <div class="w-5 h-5 sm:w-8 sm:h-8 rounded-full bg-brand-violet/10 group-hover:bg-brand-bright group-hover:text-brand-dark text-brand-violet flex items-center justify-center transition-colors">
-                  <i data-lucide="package" class="w-3 h-3 sm:w-4 sm:h-4"></i>
+          <!-- Card 04: Digital and Social Media -->
+          <div class="slr-service-card" data-service="04">
+            <div class="slr-card-front rounded-[16px] sm:rounded-[20px] bg-white border border-brand-dark p-4 sm:p-6 cursor-pointer shadow-sm hover:shadow-md hover:border-brand-violet hover:bg-purple-50/60 transition-all duration-200 flex flex-col min-h-[140px] sm:min-h-[170px]" onclick="slrToggleService('04')">
+              <div class="flex items-start justify-between mb-3 sm:mb-4">
+                <span class="text-2xl sm:text-3xl font-headline font-black text-brand-violet/70 font-mono leading-none">04</span>
+                <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-brand-violet/10 border border-brand-violet/20 flex items-center justify-center text-brand-violet flex-shrink-0">
+                  <i data-lucide="share-2" class="w-4 h-4"></i>
                 </div>
               </div>
-              <h3 class="text-[11px] sm:text-base md:text-xl font-bold font-display text-brand-dark group-hover:text-white mb-1 leading-tight sm:leading-snug">
-                Print & Pack
-              </h3>
-              <p class="text-[9px] sm:text-xs md:text-sm text-brand-muted group-hover:text-slate-300 leading-tight sm:leading-relaxed">
-                Brochures, boxes, cards, labels & menus.
-              </p>
+              <h3 class="font-display font-black text-brand-dark text-sm sm:text-base md:text-lg leading-tight mt-auto">DIGITAL &amp; SOCIAL MEDIA DESIGN</h3>
+              <div class="flex items-center gap-1 mt-2.5 text-[10px] sm:text-xs font-mono font-semibold text-brand-violet">
+                <span>EXPLORE</span>
+                <i data-lucide="chevron-right" class="w-3 h-3"></i>
+              </div>
             </div>
-            <div class="hidden sm:block pt-3 mt-3 border-t border-brand-softBorder group-hover:border-white/10">
-              <span class="text-[10px] md:text-xs font-bold text-brand-violet group-hover:text-brand-bright inline-flex items-center gap-1">
-                Explore <i data-lucide="chevron-right" class="w-3 h-3"></i>
-              </span>
+            <div class="slr-card-open hidden rounded-[16px] sm:rounded-[20px] bg-brand-dark border border-brand-violet/40 p-4 sm:p-6 shadow-xl flex-col min-h-[140px] sm:min-h-[170px]">
+              <div class="flex items-start justify-between mb-3">
+                <span class="text-[10px] font-mono font-bold text-brand-bright tracking-widest">04</span>
+                <button onclick="slrCloseService('04')" class="w-7 h-7 rounded-full bg-white/10 hover:bg-brand-bright/20 flex items-center justify-center text-white/60 hover:text-brand-bright transition-colors flex-shrink-0" aria-label="Close">
+                  <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+              <h3 class="font-display font-black text-white text-sm sm:text-base leading-tight mb-2">DIGITAL &amp; SOCIAL MEDIA DESIGN</h3>
+              <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed mb-3">Consistent and engaging digital visuals designed to strengthen your presence across online platforms.</p>
+              <ul class="space-y-1.5">
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Instagram</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Facebook</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>YouTube</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Website Graphics</li>
+              </ul>
             </div>
           </div>
 
-          <!-- Card 05: UI/UX & Web -->
-          <div class="service-card group p-2.5 sm:p-5 md:p-7 rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-1.5 sm:mb-4">
-                <span class="text-xs sm:text-base md:text-xl font-headline font-black text-brand-violet group-hover:text-brand-bright font-mono">05</span>
-                <div class="w-5 h-5 sm:w-8 sm:h-8 rounded-full bg-brand-violet/10 group-hover:bg-brand-bright group-hover:text-brand-dark text-brand-violet flex items-center justify-center transition-colors">
-                  <i data-lucide="layout" class="w-3 h-3 sm:w-4 sm:h-4"></i>
+          <!-- Card 05: Print and Packaging -->
+          <div class="slr-service-card" data-service="05">
+            <div class="slr-card-front rounded-[16px] sm:rounded-[20px] bg-white border border-brand-dark p-4 sm:p-6 cursor-pointer shadow-sm hover:shadow-md hover:border-brand-violet hover:bg-purple-50/60 transition-all duration-200 flex flex-col min-h-[140px] sm:min-h-[170px]" onclick="slrToggleService('05')">
+              <div class="flex items-start justify-between mb-3 sm:mb-4">
+                <span class="text-2xl sm:text-3xl font-headline font-black text-brand-violet/70 font-mono leading-none">05</span>
+                <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-brand-violet/10 border border-brand-violet/20 flex items-center justify-center text-brand-violet flex-shrink-0">
+                  <i data-lucide="package" class="w-4 h-4"></i>
                 </div>
               </div>
-              <h3 class="text-[11px] sm:text-base md:text-xl font-bold font-display text-brand-dark group-hover:text-white mb-1 leading-tight sm:leading-snug">
-                UI/UX & Web
-              </h3>
-              <p class="text-[9px] sm:text-xs md:text-sm text-brand-muted group-hover:text-slate-300 leading-tight sm:leading-relaxed">
-                Web UI, landing pages & mobile interfaces.
-              </p>
+              <h3 class="font-display font-black text-brand-dark text-sm sm:text-base md:text-lg leading-tight mt-auto">PRINT &amp; PACKAGING DESIGN</h3>
+              <div class="flex items-center gap-1 mt-2.5 text-[10px] sm:text-xs font-mono font-semibold text-brand-violet">
+                <span>EXPLORE</span>
+                <i data-lucide="chevron-right" class="w-3 h-3"></i>
+              </div>
             </div>
-            <div class="hidden sm:block pt-3 mt-3 border-t border-brand-softBorder group-hover:border-white/10">
-              <span class="text-[10px] md:text-xs font-bold text-brand-violet group-hover:text-brand-bright inline-flex items-center gap-1">
-                Explore <i data-lucide="chevron-right" class="w-3 h-3"></i>
-              </span>
+            <div class="slr-card-open hidden rounded-[16px] sm:rounded-[20px] bg-brand-dark border border-brand-violet/40 p-4 sm:p-6 shadow-xl flex-col min-h-[140px] sm:min-h-[170px]">
+              <div class="flex items-start justify-between mb-3">
+                <span class="text-[10px] font-mono font-bold text-brand-bright tracking-widest">05</span>
+                <button onclick="slrCloseService('05')" class="w-7 h-7 rounded-full bg-white/10 hover:bg-brand-bright/20 flex items-center justify-center text-white/60 hover:text-brand-bright transition-colors flex-shrink-0" aria-label="Close">
+                  <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+              <h3 class="font-display font-black text-white text-sm sm:text-base leading-tight mb-2">PRINT &amp; PACKAGING DESIGN</h3>
+              <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed mb-3">Professional print and packaging designs that bring your brand identity into the physical world.</p>
+              <ul class="space-y-1.5">
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Packaging</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Labels</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Menus</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Stationery</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Print Materials</li>
+              </ul>
             </div>
           </div>
 
-          <!-- Card 06: Custom Design -->
-          <div class="service-card group p-2.5 sm:p-5 md:p-7 rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-1.5 sm:mb-4">
-                <span class="text-xs sm:text-base md:text-xl font-headline font-black text-brand-violet group-hover:text-brand-bright font-mono">06</span>
-                <div class="w-5 h-5 sm:w-8 sm:h-8 rounded-full bg-brand-violet/10 group-hover:bg-brand-bright group-hover:text-brand-dark text-brand-violet flex items-center justify-center transition-colors">
-                  <i data-lucide="sparkles" class="w-3 h-3 sm:w-4 sm:h-4"></i>
+          <!-- Card 06: UI and UX Design -->
+          <div class="slr-service-card" data-service="06">
+            <div class="slr-card-front rounded-[16px] sm:rounded-[20px] bg-white border border-brand-dark p-4 sm:p-6 cursor-pointer shadow-sm hover:shadow-md hover:border-brand-violet hover:bg-purple-50/60 transition-all duration-200 flex flex-col min-h-[140px] sm:min-h-[170px]" onclick="slrToggleService('06')">
+              <div class="flex items-start justify-between mb-3 sm:mb-4">
+                <span class="text-2xl sm:text-3xl font-headline font-black text-brand-violet/70 font-mono leading-none">06</span>
+                <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-brand-violet/10 border border-brand-violet/20 flex items-center justify-center text-brand-violet flex-shrink-0">
+                  <i data-lucide="layout" class="w-4 h-4"></i>
                 </div>
               </div>
-              <h3 class="text-[11px] sm:text-base md:text-xl font-bold font-display text-brand-dark group-hover:text-white mb-1 leading-tight sm:leading-snug">
-                Custom Design
-              </h3>
-              <p class="text-[9px] sm:text-xs md:text-sm text-brand-muted group-hover:text-slate-300 leading-tight sm:leading-relaxed">
-                Illustrations, campaigns & bespoke solutions.
-              </p>
+              <h3 class="font-display font-black text-brand-dark text-sm sm:text-base md:text-lg leading-tight mt-auto">UI &amp; UX DESIGN AND DEVELOPMENT</h3>
+              <div class="flex items-center gap-1 mt-2.5 text-[10px] sm:text-xs font-mono font-semibold text-brand-violet">
+                <span>EXPLORE</span>
+                <i data-lucide="chevron-right" class="w-3 h-3"></i>
+              </div>
             </div>
-            <div class="hidden sm:block pt-3 mt-3 border-t border-brand-softBorder group-hover:border-white/10">
-              <span class="text-[10px] md:text-xs font-bold text-brand-violet group-hover:text-brand-bright inline-flex items-center gap-1">
-                Explore <i data-lucide="chevron-right" class="w-3 h-3"></i>
-              </span>
+            <div class="slr-card-open hidden rounded-[16px] sm:rounded-[20px] bg-brand-dark border border-brand-violet/40 p-4 sm:p-6 shadow-xl flex-col min-h-[140px] sm:min-h-[170px]">
+              <div class="flex items-start justify-between mb-3">
+                <span class="text-[10px] font-mono font-bold text-brand-bright tracking-widest">06</span>
+                <button onclick="slrCloseService('06')" class="w-7 h-7 rounded-full bg-white/10 hover:bg-brand-bright/20 flex items-center justify-center text-white/60 hover:text-brand-bright transition-colors flex-shrink-0" aria-label="Close">
+                  <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+              <h3 class="font-display font-black text-white text-sm sm:text-base leading-tight mb-2">UI &amp; UX DESIGN AND DEVELOPMENT</h3>
+              <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed mb-3">Modern, intuitive and responsive digital experiences designed around usability, functionality and visual impact.</p>
+              <ul class="space-y-1.5">
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Website UI</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Mobile UI</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>User Experience</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Responsive Design</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Frontend Development</li>
+              </ul>
             </div>
           </div>
 
+          <!-- Card 07: Website Handling -->
+          <div class="slr-service-card" data-service="07">
+            <div class="slr-card-front rounded-[16px] sm:rounded-[20px] bg-white border border-brand-dark p-4 sm:p-6 cursor-pointer shadow-sm hover:shadow-md hover:border-brand-violet hover:bg-purple-50/60 transition-all duration-200 flex flex-col min-h-[140px] sm:min-h-[170px]" onclick="slrToggleService('07')">
+              <div class="flex items-start justify-between mb-3 sm:mb-4">
+                <span class="text-2xl sm:text-3xl font-headline font-black text-brand-violet/70 font-mono leading-none">07</span>
+                <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-brand-violet/10 border border-brand-violet/20 flex items-center justify-center text-brand-violet flex-shrink-0">
+                  <i data-lucide="globe" class="w-4 h-4"></i>
+                </div>
+              </div>
+              <h3 class="font-display font-black text-brand-dark text-sm sm:text-base md:text-lg leading-tight mt-auto">WEBSITE HANDLING</h3>
+              <div class="flex items-center gap-1 mt-2.5 text-[10px] sm:text-xs font-mono font-semibold text-brand-violet">
+                <span>EXPLORE</span>
+                <i data-lucide="chevron-right" class="w-3 h-3"></i>
+              </div>
+            </div>
+            <div class="slr-card-open hidden rounded-[16px] sm:rounded-[20px] bg-brand-dark border border-brand-violet/40 p-4 sm:p-6 shadow-xl flex-col min-h-[140px] sm:min-h-[170px]">
+              <div class="flex items-start justify-between mb-3">
+                <span class="text-[10px] font-mono font-bold text-brand-bright tracking-widest">07</span>
+                <button onclick="slrCloseService('07')" class="w-7 h-7 rounded-full bg-white/10 hover:bg-brand-bright/20 flex items-center justify-center text-white/60 hover:text-brand-bright transition-colors flex-shrink-0" aria-label="Close">
+                  <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+              <h3 class="font-display font-black text-white text-sm sm:text-base leading-tight mb-2">WEBSITE HANDLING</h3>
+              <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed mb-3">Reliable website management and ongoing improvements to keep your digital presence professional, updated and functional.</p>
+              <ul class="space-y-1.5">
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Website Updates</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Content Updates</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Design Improvements</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Performance Monitoring</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Ongoing Support</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 08: SEO -->
+          <div class="slr-service-card" data-service="08">
+            <div class="slr-card-front rounded-[16px] sm:rounded-[20px] bg-white border border-brand-dark p-4 sm:p-6 cursor-pointer shadow-sm hover:shadow-md hover:border-brand-violet hover:bg-purple-50/60 transition-all duration-200 flex flex-col min-h-[140px] sm:min-h-[170px]" onclick="slrToggleService('08')">
+              <div class="flex items-start justify-between mb-3 sm:mb-4">
+                <span class="text-2xl sm:text-3xl font-headline font-black text-brand-violet/70 font-mono leading-none">08</span>
+                <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-brand-violet/10 border border-brand-violet/20 flex items-center justify-center text-brand-violet flex-shrink-0">
+                  <i data-lucide="search" class="w-4 h-4"></i>
+                </div>
+              </div>
+              <h3 class="font-display font-black text-brand-dark text-sm sm:text-base md:text-lg leading-tight mt-auto">SEO</h3>
+              <div class="flex items-center gap-1 mt-2.5 text-[10px] sm:text-xs font-mono font-semibold text-brand-violet">
+                <span>EXPLORE</span>
+                <i data-lucide="chevron-right" class="w-3 h-3"></i>
+              </div>
+            </div>
+            <div class="slr-card-open hidden rounded-[16px] sm:rounded-[20px] bg-brand-dark border border-brand-violet/40 p-4 sm:p-6 shadow-xl flex-col min-h-[140px] sm:min-h-[170px]">
+              <div class="flex items-start justify-between mb-3">
+                <span class="text-[10px] font-mono font-bold text-brand-bright tracking-widest">08</span>
+                <button onclick="slrCloseService('08')" class="w-7 h-7 rounded-full bg-white/10 hover:bg-brand-bright/20 flex items-center justify-center text-white/60 hover:text-brand-bright transition-colors flex-shrink-0" aria-label="Close">
+                  <i data-lucide="x" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+              <h3 class="font-display font-black text-white text-sm sm:text-base leading-tight mb-2">SEO</h3>
+              <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed mb-3">Search-focused optimization designed to improve website visibility, structure and discoverability.</p>
+              <ul class="space-y-1.5">
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>On-Page SEO</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Keyword Optimization</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Meta Titles &amp; Descriptions</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>Content Optimization</li>
+                <li class="flex items-center gap-2 text-[11px] sm:text-xs text-white/90 font-mono"><span class="w-1.5 h-1.5 rounded-full bg-brand-bright flex-shrink-0"></span>SEO-Friendly Structure</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom CTA strip -->
+        <div class="mt-10 sm:mt-14 pt-8 border-t border-brand-softBorder flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p class="text-sm text-brand-muted font-medium text-center sm:text-left">
+            Have a specific requirement? We create <span class="text-brand-dark font-bold">custom visual solutions</span> for every brand and project need.
+          </p>
+          <a href="#contact" class="flex-shrink-0 px-7 py-3 rounded-full text-sm font-bold tracking-wider text-white bg-brand-violet hover:bg-brand-bright transition-all duration-300 shadow-[0_4px_16px_rgba(124,58,237,0.25)] hover:shadow-[0_6px_22px_rgba(168,85,247,0.4)] hover:-translate-y-0.5 inline-flex items-center gap-2">
+            <span>START A PROJECT</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
         </div>
 
       </div>

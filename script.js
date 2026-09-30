@@ -3,6 +3,47 @@
  * Interactive Behaviors, Case Study Modal, Sticky Nav, and WhatsApp Dispatch
  */
 
+// --- SERVICE CARD INTERACTIVE SYSTEM ---
+// Tracks which service is currently open
+let _slrActiveService = null;
+
+function slrToggleService(id) {
+  // If clicking the already-open card, close it
+  if (_slrActiveService === id) {
+    slrCloseService(id);
+    return;
+  }
+  // Close any previously open card
+  if (_slrActiveService) {
+    _slrHideCard(_slrActiveService);
+  }
+  // Open the clicked card
+  _slrActiveService = id;
+  const card = document.querySelector('[data-service="' + id + '"]');
+  if (!card) return;
+  const front = card.querySelector('.slr-card-front');
+  const open  = card.querySelector('.slr-card-open');
+  if (front) front.classList.add('hidden');
+  if (open)  { open.classList.remove('hidden'); open.classList.add('flex'); }
+  // Re-render Lucide icons inside the newly shown panel
+  if (window.lucide) window.lucide.createIcons();
+}
+
+function slrCloseService(id) {
+  _slrHideCard(id);
+  if (_slrActiveService === id) _slrActiveService = null;
+}
+
+function _slrHideCard(id) {
+  const card = document.querySelector('[data-service="' + id + '"]');
+  if (!card) return;
+  const front = card.querySelector('.slr-card-front');
+  const open  = card.querySelector('.slr-card-open');
+  if (open)  { open.classList.add('hidden'); open.classList.remove('flex'); }
+  if (front) front.classList.remove('hidden');
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize Lucide icons
   if (window.lucide) {
