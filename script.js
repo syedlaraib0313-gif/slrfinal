@@ -181,23 +181,30 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // --- 4. Portfolio Case Study Data & Modal Manager ---
+const projectOrder = ['lumina', 'kinetic', 'nebula', 'solstice', 'vortex', 'aura'];
+let activeModalKey = null;
+
 const projectCaseStudies = {
   lumina: {
     number: '01',
     category: 'BRAND IDENTITY',
     title: 'LUMINA CREATIVE',
-    tagline: 'Complete visual identity and brand system.',
+    tagline: 'Complete visual identity, monogram system, and brand guidelines.',
+    image: 'assets/lumina.jpg',
     client: 'Lumina Global Holdings',
-    scope: 'Brand Strategy, Logo System, Typography, Guidelines',
-    overview: 'Lumina Creative required a distinctive visual architecture that balances architectural minimalism with technological sophistication. The goal was to build a memorable identity communicating confidence across international markets.',
-    concept: 'Modernist geometric monogram crafted from interlocked dynamic facets, accompanied by a disciplined Swiss typographic hierarchy and refined purple-violet tones.',
-    approach: 'Conducted competitive landscape research, established foundational grid parameters, and tested mark legibility from small mobile icons to large physical building signage.',
+    year: '2026',
+    scope: 'Brand Architecture, Logo System, Typography Hierarchy, Stationery, Guidelines',
+    overview: 'Lumina Creative required a distinctive visual architecture that balances architectural minimalism with modern sophistication. The objective was to build a memorable identity communicating unshakeable confidence across both digital and physical touchpoints.',
+    objective: 'Create a versatile, future-proof identity system that feels elevated, trustworthy and creative, capable of scaling across digital applications, architectural signage, and premium corporate collateral.',
+    approach: 'Minimal typography, disciplined Swiss grid layouts, and a sophisticated visual language. We explored geometric letterforms to construct a bold monogram mark, complemented by a refined typographic hierarchy and deep purple-violet palette.',
+    finalVisuals: 'A complete brand architecture including primary and secondary logo lockups, bespoke stationery, responsive brand guidelines, business cards, letterheads, and realistic physical presentation mockups.',
     deliverables: [
       'Primary & Secondary Logo Marks',
       'Monogram & Iconography Suite',
       'Typography Hierarchy & Specimen',
       'Comprehensive 48-Page Brand Guide',
-      'Stationery & Corporate Collateral'
+      'Stationery & Corporate Collateral',
+      'Realistic Branding Mockup Suite'
     ],
     palette: ['#1B1035', '#7C3AED', '#A855F7', '#FFFFFF']
   },
@@ -205,37 +212,45 @@ const projectCaseStudies = {
     number: '02',
     category: 'SOCIAL MEDIA',
     title: 'KINETIC SOCIAL',
-    tagline: 'Modern social media campaign and content design.',
+    tagline: 'Modern social media campaign and content design system.',
+    image: 'assets/kinetic.jpg',
     client: 'Kinetic Performance Lab',
-    scope: 'Social Feed Architecture, Carousel Kits, Reel Covers',
+    year: '2026',
+    scope: 'Social Feed Architecture, Carousel Kits, Reel Covers, Story Systems',
     overview: 'Kinetic Social sought to revitalize their multi-platform digital channels into a high-octane visual destination that turns casual scrollers into engaged brand advocates.',
-    concept: 'High-contrast editorial layouts featuring bold condensed typography, energetic motion speed-lines, and striking dark-mode aesthetics that command the social feed.',
-    approach: 'Engineered a modular component system of 30+ reusable Figma templates for rapid content creation, ensuring brand consistency across Instagram, LinkedIn, and YouTube touchpoints.',
+    objective: 'Break through the noise of crowded social feeds with high-contrast, energetic visual assets that dramatically boost engagement rates, brand recall, and follower growth.',
+    approach: 'High-contrast editorial layouts featuring bold condensed typography, dynamic motion speed-lines, and striking dark-mode aesthetics that command immediate visual focus.',
+    finalVisuals: 'A modular component system of 30+ reusable feed templates, educational carousel layout kits, high-impact reel covers, story interaction stickers, and promotional campaign graphics.',
     deliverables: [
       '30+ Modular Feed Templates',
       'Educational Carousel Layout Kits',
       'Reel & Short Video Cover Suites',
       'Story Interaction & Poll Stickers',
-      'Asset Management Guide'
+      'Paid Campaign Ad Variations',
+      'Social Media Style Guide'
     ],
     palette: ['#1B1035', '#7C3AED', '#A855F7', '#FFFFFF']
   },
   nebula: {
     number: '03',
-    category: 'PRINT & PACKAGING',
-    title: 'NEBULA PACKAGING',
-    tagline: 'Premium packaging and product presentation.',
+    category: 'PACKAGING DESIGN',
+    title: 'NEBULA COFFEE',
+    tagline: 'Premium packaging design, labels, and product presentation.',
+    image: 'assets/nebula.jpg',
     client: 'Nebula Artisan Roasters',
-    scope: 'Packaging Dielines, Custom Pouches, Foil Stamping',
-    overview: 'Nebula Artisan Roasters produces rare micro-lot single-origin beans. They needed luxury packaging that reflected their obsessive craft and justified a top-tier retail price.',
-    concept: 'Tactile soft-touch matte substrates combined with metallic foil stamping, precision typographic origin tags, and a celestial micro-pattern finish.',
-    approach: 'Collaborated directly with master printers to test spot UV, foil embossing, and paperweights. Delivered production-ready vector dielines with exact printer specifications.',
+    year: '2026',
+    scope: 'Packaging Dielines, Custom Pouches, Foil Stamping, Retail Box, Labels',
+    overview: 'Nebula Artisan Roasters produces rare micro-lot single-origin beans. They needed luxury packaging that reflected their obsessive craft and justified a top-tier retail price point.',
+    objective: 'Design tactile, shelf-stopping packaging that conveys celestial rarity and organic purity while meeting exact manufacturing specifications and production constraints.',
+    approach: 'Tactile soft-touch matte substrates combined with metallic foil stamping, precision typographic origin tags, and a celestial micro-pattern finish that radiates quality on retail shelves.',
+    finalVisuals: 'Custom dielines for 250g and 1kg coffee pouches, color-coded origin labels, retail shelf display boxes, take-away cups, and photorealistic 3D product packaging mockups.',
     deliverables: [
       '250g & 1kg Custom Pouch Dielines',
       'Origin Label Color-Coded System',
       'Retail Shelf Display Outer Box',
-      'Tasting Card & Stationery Inserts',
-      '3D Photorealistic Product Renders'
+      'Takeaway Cups & Menu Stationery',
+      'Foil Stamping & Spot UV Specs',
+      '3D Product Packaging Mockups'
     ],
     palette: ['#1B1035', '#7C3AED', '#A855F7', '#FFFFFF']
   },
@@ -243,18 +258,22 @@ const projectCaseStudies = {
     number: '04',
     category: 'POSTER DESIGN',
     title: 'SOLSTICE FEST',
-    tagline: 'Creative event poster and promotional campaign.',
+    tagline: 'Creative event poster and promotional exhibition campaign.',
+    image: 'assets/solstice.jpg',
     client: 'Solstice Sound & Arts Foundation',
-    scope: 'A1 Screenprint Posters, Digital Billboards',
-    overview: 'An international avant-garde audio festival celebrating experimental electronic soundscapes and architectural lighting installations.',
-    concept: 'Synthesizing generative acoustic waveforms with rigorous typographic grid systems, expressing sound as pure visual geometry.',
-    approach: 'Constructed an asymmetric layout utilizing extreme typographic scale contrast, bold negative space, and vibrant violet tones that radiate off dark street hoardings.',
+    year: '2026',
+    scope: 'A1 Screenprint Posters, Digital Billboards, Event Collateral',
+    overview: 'An international avant-garde audio festival celebrating experimental electronic soundscapes and architectural lighting installations in Berlin.',
+    objective: 'Create a bold, visually arresting event poster that translates sound and light into pure visual art, serving as both street promotion and a collectible print.',
+    approach: 'Constructed an asymmetric layout synthesizing generative acoustic waveforms with rigorous typographic grid systems, expressing sound as pure visual geometry.',
+    finalVisuals: 'Limited edition A1 screen-printed posters, digital city billboard animations, artist lineup announcement graphics, VIP credential lanyards, and festival merchandise.',
     deliverables: [
       'A1 Screen-printed Limited Posters',
       'Digital City Billboard Animations',
       'Artist Lineup Announcement Graphic Suite',
       'VIP Credential Lanyards & Badges',
-      'Commemorative Exhibition Book Cover'
+      'Social Media Promotional Posters',
+      'Commemorative Exhibition Print'
     ],
     palette: ['#1B1035', '#7C3AED', '#A855F7', '#FFFFFF']
   },
@@ -263,17 +282,21 @@ const projectCaseStudies = {
     category: 'ADVERTISING',
     title: 'VORTEX CAMPAIGN',
     tagline: 'High-impact advertising and promotional creatives.',
+    image: 'assets/vortex.jpg',
     client: 'Vortex Functional Beverages',
-    scope: 'Paid Ad Creatives, Motion Banners, Display Ads',
-    overview: 'Vortex launched a revolutionary nootropic focus drink requiring aggressive visual distinction in a crowded wellness and energy marketplace.',
-    concept: 'Dynamic motion graphics, high-impact lighting, bold product heroic angles, and concise value propositions tailored for high-conversion performance marketing.',
-    approach: 'Produced a cohesive suite of static and animated ad units tested across Meta, TikTok, and Google Display networks with optimized A/B headline variants.',
+    year: '2026',
+    scope: 'Paid Ad Creatives, Motion Banners, Display Ads, POS Displays',
+    overview: 'Vortex launched a revolutionary nootropic focus beverage requiring aggressive visual distinction in a crowded wellness and functional drink marketplace.',
+    objective: 'Drive direct-to-consumer conversions and retail awareness with high-CTR digital advertisements, striking product hero imagery, and cohesive multi-channel promotional assets.',
+    approach: 'Dynamic motion graphics, high-impact lighting, bold product heroic angles, and concise value propositions tailored for high-conversion performance marketing.',
+    finalVisuals: 'A comprehensive suite of multi-aspect-ratio ad creatives, animated display banners, retail point-of-sale displays, and influencer press launch collateral.',
     deliverables: [
       '15+ Multi-Aspect Ratio Ad Creatives',
       'Animated Motion Display Units (HTML5/MP4)',
       'Retail Point-of-Sale Poster Displays',
+      'Meta, Google & TikTok Paid Creatives',
       'Product Launch Influencer Press Kits',
-      'Performance Analytics & Iteration Log'
+      'High-CTR Headline Variant Library'
     ],
     palette: ['#1B1035', '#7C3AED', '#A855F7', '#FFFFFF']
   },
@@ -282,17 +305,21 @@ const projectCaseStudies = {
     category: 'BRAND & UI',
     title: 'AURA DIGITAL',
     tagline: 'Brand identity combined with modern digital interface design.',
+    image: 'assets/aura.jpg',
     client: 'Aura Digital Labs',
-    scope: 'Identity Design, Figma UI Kit, Landing Page Flow',
-    overview: 'Aura is a digital health & skincare platform combining tailored botanical formulas with automated skin-analysis intelligence.',
-    concept: 'An editorial visual system blending serene natural luxury with clean, high-precision digital product design and friction-free user flows.',
-    approach: 'We developed the visual identity and translated its typography, color values, and spacing tokens into a full-scale Figma design system for responsive web and mobile web.',
+    year: '2026',
+    scope: 'Brand Identity, Desktop & Mobile UI, Consultation Flow, Packaging',
+    overview: 'Aura is a digital health & organic skincare platform combining personalized botanical formulas with automated skin-analysis intelligence.',
+    objective: 'Unify physical brand packaging, digital consultation questionnaires, and a high-converting e-commerce web platform into one seamless, luxurious customer experience.',
+    approach: 'An editorial visual system blending serene natural luxury with clean, high-precision digital product design, responsive desktop layouts, and mobile-optimized user flows.',
+    finalVisuals: 'Complete brand identity, responsive e-commerce web design, mobile app interface screens, product packaging mockups, stationery, and comprehensive design tokens.',
     deliverables: [
       'Complete Brand Identity & Guidelines',
-      'Responsive Landing Page UI & UX Flow',
-      'Interactive Consultation Questionnaire UX',
+      'Desktop & Mobile Web UI/UX',
+      'Interactive Consultation Questionnaire Flow',
+      'Product Packaging & Label System',
       'Design Token Library (Figma & CSS)',
-      'Digital Packaging & Unboxing Guide'
+      'Social Assets & Unboxing Collateral'
     ],
     palette: ['#1B1035', '#7C3AED', '#A855F7', '#FFFFFF']
   }
@@ -302,8 +329,14 @@ function openProjectModal(key) {
   const p = projectCaseStudies[key];
   if (!p) return;
 
+  activeModalKey = key;
   const modal = document.getElementById('project-modal');
   const content = document.getElementById('modal-content');
+
+  const currIndex = projectOrder.indexOf(key);
+  const prevKey = projectOrder[(currIndex - 1 + projectOrder.length) % projectOrder.length];
+  const nextKey = projectOrder[(currIndex + 1) % projectOrder.length];
+  const nextProject = projectCaseStudies[nextKey];
 
   const deliverablesHtml = p.deliverables.map(item => `
     <li class="flex items-center gap-2 text-xs sm:text-sm text-brand-dark font-mono">
@@ -313,8 +346,8 @@ function openProjectModal(key) {
   `).join('');
 
   const paletteHtml = p.palette.map(color => `
-    <div class="flex items-center gap-2 p-2 rounded-xl bg-brand-bgLight border border-brand-softBorder">
-      <span class="w-5 h-5 rounded-full border border-brand-softBorder flex-shrink-0" style="background-color: ${color}"></span>
+    <div class="flex items-center gap-2 p-2 sm:p-2.5 rounded-xl bg-brand-bgLight border border-brand-softBorder">
+      <span class="w-5 h-5 rounded-full border border-brand-softBorder flex-shrink-0 shadow-sm" style="background-color: ${color}"></span>
       <span class="text-[11px] font-mono text-brand-dark font-bold">${color}</span>
     </div>
   `).join('');
@@ -322,53 +355,107 @@ function openProjectModal(key) {
   content.innerHTML = `
     <div class="space-y-6 sm:space-y-8 animate-fade-in text-brand-dark">
       
-      <!-- Header Meta -->
+      <!-- Top Project Counter Strip & Quick Nav -->
+      <div class="flex items-center justify-between text-xs font-mono pb-2 border-b border-brand-softBorder/60">
+        <span class="text-brand-violet font-bold">${p.number} / 06 // ${p.category}</span>
+        <div class="flex items-center gap-3">
+          <button onclick="openProjectModal('${prevKey}')" class="text-brand-muted hover:text-brand-violet transition-colors inline-flex items-center gap-1 font-semibold">
+            <i data-lucide="chevron-left" class="w-3.5 h-3.5"></i>
+            <span class="hidden sm:inline">PREVIOUS</span>
+          </button>
+          <span class="text-brand-softBorder">|</span>
+          <button onclick="openProjectModal('${nextKey}')" class="text-brand-violet hover:text-brand-bright transition-colors inline-flex items-center gap-1 font-semibold">
+            <span>NEXT PROJECT</span>
+            <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Large Project Cover Image (Behance Case Study Style) -->
+      <div class="relative w-full rounded-2xl overflow-hidden border border-brand-softBorder shadow-lg bg-brand-dark">
+        <img src="${p.image}" alt="${p.title} Case Study Visual" class="w-full h-auto object-cover max-h-[500px]" />
+        <div class="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-brand-dark/85 backdrop-blur-md text-[10px] font-mono text-white/90 border border-white/10 uppercase tracking-widest font-semibold">
+          High-Resolution Showcase
+        </div>
+      </div>
+
+      <!-- Header Meta & Title -->
       <div>
         <div class="flex items-center gap-2 text-xs font-mono text-brand-violet mb-2 font-bold">
           <span class="px-2.5 py-0.5 rounded-full bg-brand-violet/10 border border-brand-violet/20">${p.number} // ${p.category}</span>
           <span class="text-brand-muted">CASE STUDY</span>
         </div>
-        <h2 class="text-2xl sm:text-4xl font-display font-black text-brand-dark uppercase tracking-tight">${p.title}</h2>
-        <p class="text-sm sm:text-base text-brand-muted mt-1 font-medium">${p.tagline}</p>
+        <h2 class="text-2xl sm:text-4xl lg:text-5xl font-display font-black text-brand-dark uppercase tracking-tight">${p.title}</h2>
+        <p class="text-sm sm:text-lg text-brand-muted mt-2 font-medium leading-relaxed">${p.tagline}</p>
       </div>
 
       <!-- Quick Info Bar -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 rounded-2xl bg-brand-bgLight border border-brand-softBorder">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 sm:p-5 rounded-2xl bg-brand-bgLight border border-brand-softBorder">
         <div>
           <span class="text-[10px] font-mono text-brand-muted uppercase block font-semibold">Client</span>
           <span class="text-xs sm:text-sm font-bold text-brand-dark">${p.client}</span>
         </div>
         <div>
-          <span class="text-[10px] font-mono text-brand-muted uppercase block font-semibold">Disciplines</span>
+          <span class="text-[10px] font-mono text-brand-muted uppercase block font-semibold">Year</span>
+          <span class="text-xs sm:text-sm font-bold text-brand-dark">${p.year}</span>
+        </div>
+        <div>
+          <span class="text-[10px] font-mono text-brand-muted uppercase block font-semibold">Category</span>
           <span class="text-xs sm:text-sm font-bold text-brand-dark">${p.category}</span>
         </div>
         <div>
-          <span class="text-[10px] font-mono text-brand-muted uppercase block font-semibold">Scope</span>
-          <span class="text-xs sm:text-sm font-bold text-brand-dark">${p.scope}</span>
+          <span class="text-[10px] font-mono text-brand-muted uppercase block font-semibold">Discipline</span>
+          <span class="text-xs sm:text-sm font-bold text-brand-dark">Studio Showcase</span>
         </div>
       </div>
 
-      <!-- Content Sections -->
-      <div class="space-y-5 text-sm sm:text-base">
-        <div>
-          <h3 class="text-xs font-mono uppercase tracking-widest text-brand-violet font-bold mb-1.5">01. Project Overview</h3>
-          <p class="text-brand-muted leading-relaxed">${p.overview}</p>
+      <!-- Detailed Case Study Narrative Sections -->
+      <div class="space-y-6 text-sm sm:text-base">
+        
+        <!-- 01. Project Overview -->
+        <div class="p-5 sm:p-6 rounded-2xl bg-white border border-brand-softBorder shadow-sm">
+          <h3 class="text-xs font-mono uppercase tracking-widest text-brand-violet font-bold mb-2 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-brand-violet"></span>
+            01. Project Overview
+          </h3>
+          <p class="text-brand-dark/80 leading-relaxed font-normal">${p.overview}</p>
         </div>
 
-        <div>
-          <h3 class="text-xs font-mono uppercase tracking-widest text-brand-violet font-bold mb-1.5">02. Creative Concept</h3>
-          <p class="text-brand-muted leading-relaxed">${p.concept}</p>
+        <!-- 02. Design Objective -->
+        <div class="p-5 sm:p-6 rounded-2xl bg-white border border-brand-softBorder shadow-sm">
+          <h3 class="text-xs font-mono uppercase tracking-widest text-brand-violet font-bold mb-2 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-brand-violet"></span>
+            02. Design Objective
+          </h3>
+          <p class="text-brand-dark/80 leading-relaxed font-normal">${p.objective}</p>
         </div>
 
-        <div>
-          <h3 class="text-xs font-mono uppercase tracking-widest text-brand-violet font-bold mb-1.5">03. Design Approach</h3>
-          <p class="text-brand-muted leading-relaxed">${p.approach}</p>
+        <!-- 03. Creative Approach -->
+        <div class="p-5 sm:p-6 rounded-2xl bg-white border border-brand-softBorder shadow-sm">
+          <h3 class="text-xs font-mono uppercase tracking-widest text-brand-violet font-bold mb-2 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-brand-violet"></span>
+            03. Creative Approach
+          </h3>
+          <p class="text-brand-dark/80 leading-relaxed font-normal">${p.approach}</p>
         </div>
+
+        <!-- 04. Final Design Visuals -->
+        <div class="p-5 sm:p-6 rounded-2xl bg-brand-dark text-white shadow-md">
+          <h3 class="text-xs font-mono uppercase tracking-widest text-brand-bright font-bold mb-2 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-brand-bright"></span>
+            04. Final Design Visuals & Execution
+          </h3>
+          <p class="text-slate-200 leading-relaxed font-normal text-xs sm:text-sm">${p.finalVisuals}</p>
+        </div>
+
       </div>
 
       <!-- Deliverables Section -->
-      <div class="p-5 rounded-2xl bg-brand-bgLight border border-brand-softBorder">
-        <h3 class="text-xs font-mono uppercase tracking-widest text-brand-dark font-bold mb-3">Key Deliverables</h3>
+      <div class="p-5 sm:p-6 rounded-2xl bg-brand-bgLight border border-brand-softBorder">
+        <h3 class="text-xs font-mono uppercase tracking-widest text-brand-dark font-bold mb-3 flex items-center gap-2">
+          <i data-lucide="check-circle" class="w-4 h-4 text-brand-violet"></i>
+          Key Deliverables
+        </h3>
         <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
           ${deliverablesHtml}
         </ul>
@@ -376,20 +463,36 @@ function openProjectModal(key) {
 
       <!-- Color Palette -->
       <div>
-        <h3 class="text-xs font-mono uppercase tracking-widest text-brand-muted font-bold mb-2.5">Color System</h3>
+        <h3 class="text-xs font-mono uppercase tracking-widest text-brand-muted font-bold mb-2.5">Studio Color System</h3>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
           ${paletteHtml}
         </div>
       </div>
 
-      <!-- Modal Bottom Actions -->
-      <div class="pt-5 border-t border-brand-softBorder flex flex-col sm:flex-row items-center justify-between gap-3">
-        <button onclick="closeProjectModal()" class="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-brand-dark hover:bg-brand-dark hover:text-white text-brand-dark transition-all text-xs font-bold uppercase tracking-wider">
-          ← Back to Portfolio
+      <!-- Next Project Showcase Banner -->
+      <div class="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-brand-violet/10 via-brand-bright/10 to-transparent border border-brand-violet/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div>
+          <span class="text-[10px] font-mono text-brand-violet uppercase tracking-widest font-bold block mb-1">UP NEXT</span>
+          <h4 class="text-base sm:text-lg font-display font-bold text-brand-dark">${nextProject.number} — ${nextProject.title}</h4>
+          <p class="text-xs text-brand-muted">${nextProject.category}</p>
+        </div>
+        <button onclick="openProjectModal('${nextKey}')" class="px-5 py-2.5 rounded-xl bg-brand-violet hover:bg-brand-bright text-white text-xs font-bold uppercase tracking-wider transition-all inline-flex items-center gap-2 shadow-sm">
+          <span>VIEW NEXT PROJECT</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
         </button>
+      </div>
+
+      <!-- Modal Bottom Actions Bar -->
+      <div class="pt-5 border-t border-brand-softBorder flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div class="flex items-center gap-2 w-full sm:w-auto">
+          <button onclick="closeProjectModal()" class="w-full sm:w-auto px-5 py-3 rounded-xl border border-brand-dark hover:bg-brand-dark hover:text-white text-brand-dark transition-all text-xs font-bold uppercase tracking-wider inline-flex items-center justify-center gap-2">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+            <span>Back to Portfolio</span>
+          </button>
+        </div>
         <a href="#contact" onclick="closeProjectModal()" class="w-full sm:w-auto px-7 py-3 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-brand-violet hover:bg-brand-bright transition-all text-center inline-flex items-center justify-center gap-2 shadow-sm">
           <span>Inquire About Similar Project</span>
-          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
         </a>
       </div>
 
@@ -398,16 +501,32 @@ function openProjectModal(key) {
 
   modal.classList.remove('hidden');
   document.body.style.overflow = 'hidden';
+  modal.scrollTop = 0;
 
   if (window.lucide) {
     window.lucide.createIcons();
   }
 }
 
+function nextProjectModal() {
+  if (!activeModalKey) return;
+  const currIndex = projectOrder.indexOf(activeModalKey);
+  const nextKey = projectOrder[(currIndex + 1) % projectOrder.length];
+  openProjectModal(nextKey);
+}
+
+function prevProjectModal() {
+  if (!activeModalKey) return;
+  const currIndex = projectOrder.indexOf(activeModalKey);
+  const prevKey = projectOrder[(currIndex - 1 + projectOrder.length) % projectOrder.length];
+  openProjectModal(prevKey);
+}
+
 function closeProjectModal() {
   const modal = document.getElementById('project-modal');
   modal.classList.add('hidden');
   document.body.style.overflow = 'auto';
+  activeModalKey = null;
 }
 
 window.addEventListener('click', (e) => {
@@ -420,5 +539,9 @@ window.addEventListener('click', (e) => {
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     closeProjectModal();
+  } else if (e.key === 'ArrowRight' && activeModalKey) {
+    nextProjectModal();
+  } else if (e.key === 'ArrowLeft' && activeModalKey) {
+    prevProjectModal();
   }
 });

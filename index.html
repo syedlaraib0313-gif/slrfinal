@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
@@ -551,7 +551,7 @@
     </section>
 
     <!-- ========================================== -->
-    <!-- 3. PORTFOLIO SECTION (3x2 GRID ON MOBILE)  -->
+    <!-- 3. PORTFOLIO SECTION — FEATURED PROJECTS   -->
     <!-- ========================================== -->
     <section id="portfolio" class="py-16 sm:py-24 relative px-4 sm:px-6 lg:px-8 border-t border-brand-softBorder bg-white">
       <div class="max-w-7xl mx-auto">
@@ -566,7 +566,7 @@
               FEATURED <span class="text-brand-violet">PROJECTS.</span>
             </h2>
             <p class="text-brand-muted text-sm sm:text-lg mt-2 max-w-xl">
-              Ideas transformed into powerful visual experiences. Tap any project to open full case study details.
+              Ideas transformed into powerful visual experiences.
             </p>
           </div>
           <div class="mt-4 md:mt-0 text-xs font-mono text-brand-muted uppercase font-semibold">
@@ -574,90 +574,258 @@
           </div>
         </div>
 
-        <!-- EXACTLY 6 PORTFOLIO BOXES: 3x2 GRID ON MOBILE, 2-COL / 3-COL ON DESKTOP -->
-        <div class="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 lg:gap-8">
+        <!-- 6 PORTFOLIO SHOWCASE CARDS: 3-COL ON DESKTOP, 2-COL TABLET, 1-COL MOBILE -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 lg:gap-8">
           
-          <!-- Box 01: Lumina Creative -->
-          <article class="portfolio-card group rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark p-2 sm:p-4 shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 cursor-pointer flex flex-col justify-between" onclick="openProjectModal('lumina')">
-            <div class="h-24 sm:h-44 md:h-56 lg:h-64 w-full rounded-xl overflow-hidden bg-brand-dark relative flex items-center justify-center p-2 sm:p-4 text-white">
-              <div class="text-center">
-                <span class="text-[8px] sm:text-xs font-mono text-brand-bright block font-bold">01 // BRAND</span>
-                <span class="text-xs sm:text-lg md:text-2xl font-headline font-black tracking-widest text-white">LUMINA</span>
+          <!-- Project 01: Lumina Creative -->
+          <article class="portfolio-card group rounded-[18px] sm:rounded-[22px] bg-white p-3.5 sm:p-5 flex flex-col justify-between cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300" onclick="openProjectModal('lumina')">
+            <div class="relative w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden bg-brand-dark/5 mb-4">
+              <img 
+                src="assets/lumina.jpg" 
+                alt="Lumina Creative Brand Identity Presentation" 
+                loading="lazy" 
+                class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/85 via-brand-dark/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                <span class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-brand-dark font-display font-bold text-xs uppercase tracking-wider shadow-xl transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                  <span>VIEW PROJECT</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-brand-violet"></i>
+                </span>
+              </div>
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-brand-dark/85 backdrop-blur-md text-[10px] font-mono font-bold text-white border border-white/10 uppercase tracking-wider shadow-sm">
+                01 // BRAND IDENTITY
               </div>
             </div>
-            <div class="pt-2 sm:pt-3">
-              <span class="text-[8px] sm:text-xs font-mono text-brand-violet group-hover:text-brand-bright block font-semibold truncate">01 — Brand Identity</span>
-              <h3 class="text-[10px] sm:text-base font-bold font-display text-brand-dark group-hover:text-white truncate">Lumina Creative</h3>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <div class="flex items-center justify-between text-xs font-mono text-brand-violet font-semibold mb-1">
+                  <span>01 — Brand Identity</span>
+                  <span class="text-brand-muted text-[11px]">2026</span>
+                </div>
+                <h3 class="text-base sm:text-xl font-display font-bold text-brand-dark group-hover:text-brand-violet transition-colors mb-2 leading-snug">
+                  Lumina Creative
+                </h3>
+                <p class="text-xs sm:text-sm text-brand-muted leading-relaxed line-clamp-2">
+                  Complete visual identity, monogram system, typography and comprehensive brand guidelines for a modern creative studio.
+                </p>
+              </div>
+              <div class="pt-3 mt-4 border-t border-brand-softBorder flex items-center justify-between text-xs font-bold text-brand-violet group-hover:text-brand-bright">
+                <span class="inline-flex items-center gap-1.5 font-mono">
+                  EXPLORE CASE STUDY
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
+                </span>
+                <span class="text-[10px] font-mono text-brand-muted uppercase">Case Study</span>
+              </div>
             </div>
           </article>
 
-          <!-- Box 02: Kinetic Social -->
-          <article class="portfolio-card group rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark p-2 sm:p-4 shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 cursor-pointer flex flex-col justify-between" onclick="openProjectModal('kinetic')">
-            <div class="h-24 sm:h-44 md:h-56 lg:h-64 w-full rounded-xl overflow-hidden bg-gradient-to-br from-brand-violet to-brand-dark relative flex items-center justify-center p-2 sm:p-4 text-white">
-              <div class="text-center">
-                <span class="text-[8px] sm:text-xs font-mono text-brand-bright block font-bold">02 // SOCIAL</span>
-                <span class="text-xs sm:text-lg md:text-2xl font-headline font-black tracking-widest text-white">KINETIC</span>
+          <!-- Project 02: Kinetic Social -->
+          <article class="portfolio-card group rounded-[18px] sm:rounded-[22px] bg-white p-3.5 sm:p-5 flex flex-col justify-between cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300" onclick="openProjectModal('kinetic')">
+            <div class="relative w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden bg-brand-dark/5 mb-4">
+              <img 
+                src="assets/kinetic.jpg" 
+                alt="Kinetic Social Media Design Showcase" 
+                loading="lazy" 
+                class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/85 via-brand-dark/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                <span class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-brand-dark font-display font-bold text-xs uppercase tracking-wider shadow-xl transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                  <span>VIEW PROJECT</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-brand-violet"></i>
+                </span>
+              </div>
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-brand-dark/85 backdrop-blur-md text-[10px] font-mono font-bold text-white border border-white/10 uppercase tracking-wider shadow-sm">
+                02 // SOCIAL MEDIA
               </div>
             </div>
-            <div class="pt-2 sm:pt-3">
-              <span class="text-[8px] sm:text-xs font-mono text-brand-violet group-hover:text-brand-bright block font-semibold truncate">02 — Social Media</span>
-              <h3 class="text-[10px] sm:text-base font-bold font-display text-brand-dark group-hover:text-white truncate">Kinetic Social</h3>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <div class="flex items-center justify-between text-xs font-mono text-brand-violet font-semibold mb-1">
+                  <span>02 — Social Media</span>
+                  <span class="text-brand-muted text-[11px]">2026</span>
+                </div>
+                <h3 class="text-base sm:text-xl font-display font-bold text-brand-dark group-hover:text-brand-violet transition-colors mb-2 leading-snug">
+                  Kinetic Social
+                </h3>
+                <p class="text-xs sm:text-sm text-brand-muted leading-relaxed line-clamp-2">
+                  Modern social media design showcase containing Instagram post designs, promotional creatives, and campaign visuals.
+                </p>
+              </div>
+              <div class="pt-3 mt-4 border-t border-brand-softBorder flex items-center justify-between text-xs font-bold text-brand-violet group-hover:text-brand-bright">
+                <span class="inline-flex items-center gap-1.5 font-mono">
+                  EXPLORE CASE STUDY
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
+                </span>
+                <span class="text-[10px] font-mono text-brand-muted uppercase">Case Study</span>
+              </div>
             </div>
           </article>
 
-          <!-- Box 03: Nebula Packaging -->
-          <article class="portfolio-card group rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark p-2 sm:p-4 shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 cursor-pointer flex flex-col justify-between" onclick="openProjectModal('nebula')">
-            <div class="h-24 sm:h-44 md:h-56 lg:h-64 w-full rounded-xl overflow-hidden bg-brand-dark relative flex items-center justify-center p-2 sm:p-4 text-white">
-              <div class="text-center">
-                <span class="text-[8px] sm:text-xs font-mono text-brand-bright block font-bold">03 // PACKAGING</span>
-                <span class="text-xs sm:text-lg md:text-2xl font-headline font-black tracking-widest text-white">NEBULA</span>
+          <!-- Project 03: Nebula Coffee -->
+          <article class="portfolio-card group rounded-[18px] sm:rounded-[22px] bg-white p-3.5 sm:p-5 flex flex-col justify-between cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300" onclick="openProjectModal('nebula')">
+            <div class="relative w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden bg-brand-dark/5 mb-4">
+              <img 
+                src="assets/nebula.jpg" 
+                alt="Nebula Coffee Packaging Design Mockup" 
+                loading="lazy" 
+                class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/85 via-brand-dark/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                <span class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-brand-dark font-display font-bold text-xs uppercase tracking-wider shadow-xl transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                  <span>VIEW PROJECT</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-brand-violet"></i>
+                </span>
+              </div>
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-brand-dark/85 backdrop-blur-md text-[10px] font-mono font-bold text-white border border-white/10 uppercase tracking-wider shadow-sm">
+                03 // PACKAGING
               </div>
             </div>
-            <div class="pt-2 sm:pt-3">
-              <span class="text-[8px] sm:text-xs font-mono text-brand-violet group-hover:text-brand-bright block font-semibold truncate">03 — Packaging</span>
-              <h3 class="text-[10px] sm:text-base font-bold font-display text-brand-dark group-hover:text-white truncate">Nebula Coffee</h3>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <div class="flex items-center justify-between text-xs font-mono text-brand-violet font-semibold mb-1">
+                  <span>03 — Packaging</span>
+                  <span class="text-brand-muted text-[11px]">2026</span>
+                </div>
+                <h3 class="text-base sm:text-xl font-display font-bold text-brand-dark group-hover:text-brand-violet transition-colors mb-2 leading-snug">
+                  Nebula Coffee
+                </h3>
+                <p class="text-xs sm:text-sm text-brand-muted leading-relaxed line-clamp-2">
+                  Realistic packaging design mockup showing coffee packaging, labels, branding, and tactile retail presentation.
+                </p>
+              </div>
+              <div class="pt-3 mt-4 border-t border-brand-softBorder flex items-center justify-between text-xs font-bold text-brand-violet group-hover:text-brand-bright">
+                <span class="inline-flex items-center gap-1.5 font-mono">
+                  EXPLORE CASE STUDY
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
+                </span>
+                <span class="text-[10px] font-mono text-brand-muted uppercase">Case Study</span>
+              </div>
             </div>
           </article>
 
-          <!-- Box 04: Solstice Fest -->
-          <article class="portfolio-card group rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark p-2 sm:p-4 shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 cursor-pointer flex flex-col justify-between" onclick="openProjectModal('solstice')">
-            <div class="h-24 sm:h-44 md:h-56 lg:h-64 w-full rounded-xl overflow-hidden bg-gradient-to-tr from-brand-dark via-brand-violet/70 to-brand-bright relative flex items-center justify-center p-2 sm:p-4 text-white">
-              <div class="text-center">
-                <span class="text-[8px] sm:text-xs font-mono text-white block font-bold">04 // POSTER</span>
-                <span class="text-xs sm:text-lg md:text-2xl font-headline font-black tracking-widest text-white">SOLSTICE</span>
+          <!-- Project 04: Solstice Fest -->
+          <article class="portfolio-card group rounded-[18px] sm:rounded-[22px] bg-white p-3.5 sm:p-5 flex flex-col justify-between cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300" onclick="openProjectModal('solstice')">
+            <div class="relative w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden bg-brand-dark/5 mb-4">
+              <img 
+                src="assets/solstice.jpg" 
+                alt="Solstice Fest Event Poster Design" 
+                loading="lazy" 
+                class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/85 via-brand-dark/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                <span class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-brand-dark font-display font-bold text-xs uppercase tracking-wider shadow-xl transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                  <span>VIEW PROJECT</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-brand-violet"></i>
+                </span>
+              </div>
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-brand-dark/85 backdrop-blur-md text-[10px] font-mono font-bold text-white border border-white/10 uppercase tracking-wider shadow-sm">
+                04 // POSTER DESIGN
               </div>
             </div>
-            <div class="pt-2 sm:pt-3">
-              <span class="text-[8px] sm:text-xs font-mono text-brand-violet group-hover:text-brand-bright block font-semibold truncate">04 — Poster Design</span>
-              <h3 class="text-[10px] sm:text-base font-bold font-display text-brand-dark group-hover:text-white truncate">Solstice Fest</h3>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <div class="flex items-center justify-between text-xs font-mono text-brand-violet font-semibold mb-1">
+                  <span>04 — Poster Design</span>
+                  <span class="text-brand-muted text-[11px]">2026</span>
+                </div>
+                <h3 class="text-base sm:text-xl font-display font-bold text-brand-dark group-hover:text-brand-violet transition-colors mb-2 leading-snug">
+                  Solstice Fest
+                </h3>
+                <p class="text-xs sm:text-sm text-brand-muted leading-relaxed line-clamp-2">
+                  Bold professional poster design with strong typography, dynamic acoustic waveforms, and exhibition artwork.
+                </p>
+              </div>
+              <div class="pt-3 mt-4 border-t border-brand-softBorder flex items-center justify-between text-xs font-bold text-brand-violet group-hover:text-brand-bright">
+                <span class="inline-flex items-center gap-1.5 font-mono">
+                  EXPLORE CASE STUDY
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
+                </span>
+                <span class="text-[10px] font-mono text-brand-muted uppercase">Case Study</span>
+              </div>
             </div>
           </article>
 
-          <!-- Box 05: Vortex Campaign -->
-          <article class="portfolio-card group rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark p-2 sm:p-4 shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 cursor-pointer flex flex-col justify-between" onclick="openProjectModal('vortex')">
-            <div class="h-24 sm:h-44 md:h-56 lg:h-64 w-full rounded-xl overflow-hidden bg-brand-dark relative flex items-center justify-center p-2 sm:p-4 text-white">
-              <div class="text-center">
-                <span class="text-[8px] sm:text-xs font-mono text-brand-bright block font-bold">05 // ADVERTISING</span>
-                <span class="text-xs sm:text-lg md:text-2xl font-headline font-black tracking-widest text-white">VORTEX</span>
+          <!-- Project 05: Vortex Campaign -->
+          <article class="portfolio-card group rounded-[18px] sm:rounded-[22px] bg-white p-3.5 sm:p-5 flex flex-col justify-between cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300" onclick="openProjectModal('vortex')">
+            <div class="relative w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden bg-brand-dark/5 mb-4">
+              <img 
+                src="assets/vortex.jpg" 
+                alt="Vortex Campaign Advertising Showcase" 
+                loading="lazy" 
+                class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/85 via-brand-dark/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                <span class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-brand-dark font-display font-bold text-xs uppercase tracking-wider shadow-xl transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                  <span>VIEW PROJECT</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-brand-violet"></i>
+                </span>
+              </div>
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-brand-dark/85 backdrop-blur-md text-[10px] font-mono font-bold text-white border border-white/10 uppercase tracking-wider shadow-sm">
+                05 // ADVERTISING
               </div>
             </div>
-            <div class="pt-2 sm:pt-3">
-              <span class="text-[8px] sm:text-xs font-mono text-brand-violet group-hover:text-brand-bright block font-semibold truncate">05 — Advertising</span>
-              <h3 class="text-[10px] sm:text-base font-bold font-display text-brand-dark group-hover:text-white truncate">Vortex Campaign</h3>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <div class="flex items-center justify-between text-xs font-mono text-brand-violet font-semibold mb-1">
+                  <span>05 — Advertising</span>
+                  <span class="text-brand-muted text-[11px]">2026</span>
+                </div>
+                <h3 class="text-base sm:text-xl font-display font-bold text-brand-dark group-hover:text-brand-violet transition-colors mb-2 leading-snug">
+                  Vortex Campaign
+                </h3>
+                <p class="text-xs sm:text-sm text-brand-muted leading-relaxed line-clamp-2">
+                  High-impact advertising campaign showcase featuring promotional banners, digital advertisements, and campaign creatives.
+                </p>
+              </div>
+              <div class="pt-3 mt-4 border-t border-brand-softBorder flex items-center justify-between text-xs font-bold text-brand-violet group-hover:text-brand-bright">
+                <span class="inline-flex items-center gap-1.5 font-mono">
+                  EXPLORE CASE STUDY
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
+                </span>
+                <span class="text-[10px] font-mono text-brand-muted uppercase">Case Study</span>
+              </div>
             </div>
           </article>
 
-          <!-- Box 06: Aura Digital -->
-          <article class="portfolio-card group rounded-[14px] sm:rounded-[18px] bg-white border border-brand-dark p-2 sm:p-4 shadow-sm hover:bg-brand-dark hover:text-white transition-all duration-300 cursor-pointer flex flex-col justify-between" onclick="openProjectModal('aura')">
-            <div class="h-24 sm:h-44 md:h-56 lg:h-64 w-full rounded-xl overflow-hidden bg-gradient-to-br from-brand-violet/90 to-brand-dark relative flex items-center justify-center p-2 sm:p-4 text-white">
-              <div class="text-center">
-                <span class="text-[8px] sm:text-xs font-mono text-brand-bright block font-bold">06 // BRAND & UI</span>
-                <span class="text-xs sm:text-lg md:text-2xl font-headline font-black tracking-widest text-white">AURA</span>
+          <!-- Project 06: Aura Digital -->
+          <article class="portfolio-card group rounded-[18px] sm:rounded-[22px] bg-white p-3.5 sm:p-5 flex flex-col justify-between cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300" onclick="openProjectModal('aura')">
+            <div class="relative w-full aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden bg-brand-dark/5 mb-4">
+              <img 
+                src="assets/aura.jpg" 
+                alt="Aura Digital Brand and UI Design Showcase" 
+                loading="lazy" 
+                class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/85 via-brand-dark/35 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                <span class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-brand-dark font-display font-bold text-xs uppercase tracking-wider shadow-xl transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                  <span>VIEW PROJECT</span>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-brand-violet"></i>
+                </span>
+              </div>
+              <div class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-brand-dark/85 backdrop-blur-md text-[10px] font-mono font-bold text-white border border-white/10 uppercase tracking-wider shadow-sm">
+                06 // BRAND &amp; UI
               </div>
             </div>
-            <div class="pt-2 sm:pt-3">
-              <span class="text-[8px] sm:text-xs font-mono text-brand-violet group-hover:text-brand-bright block font-semibold truncate">06 — Brand & UI</span>
-              <h3 class="text-[10px] sm:text-base font-bold font-display text-brand-dark group-hover:text-white truncate">Aura Digital</h3>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <div class="flex items-center justify-between text-xs font-mono text-brand-violet font-semibold mb-1">
+                  <span>06 — Brand &amp; UI</span>
+                  <span class="text-brand-muted text-[11px]">2026</span>
+                </div>
+                <h3 class="text-base sm:text-xl font-display font-bold text-brand-dark group-hover:text-brand-violet transition-colors mb-2 leading-snug">
+                  Aura Digital
+                </h3>
+                <p class="text-xs sm:text-sm text-brand-muted leading-relaxed line-clamp-2">
+                  Modern website and UI design showcase displaying desktop and mobile interface screens with unified luxury branding.
+                </p>
+              </div>
+              <div class="pt-3 mt-4 border-t border-brand-softBorder flex items-center justify-between text-xs font-bold text-brand-violet group-hover:text-brand-bright">
+                <span class="inline-flex items-center gap-1.5 font-mono">
+                  EXPLORE CASE STUDY
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
+                </span>
+                <span class="text-[10px] font-mono text-brand-muted uppercase">Case Study</span>
+              </div>
             </div>
           </article>
 

@@ -39,21 +39,18 @@ html {
 
 /* Base Card Style: White bg, 1px solid #1B1035 border, subtle shadow, rounded corners */
 .service-card,
-.about-card,
-.portfolio-card {
+.about-card {
   background: #FFFFFF;
   border: 1px solid #1B1035;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform, background, color;
 }
 
-/* Hover / Tap State: Invert to Dark Purple background with White text & Bright Violet accents */
+/* Hover / Tap State for Service and About Cards */
 .service-card:hover,
 .service-card:active,
 .about-card:hover,
-.about-card:active,
-.portfolio-card:hover,
-.portfolio-card:active {
+.about-card:active {
   background: #1B1035 !important;
   color: #FFFFFF !important;
   border-color: #1B1035 !important;
@@ -61,16 +58,29 @@ html {
   box-shadow: 0 8px 24px -4px rgba(27, 16, 53, 0.25);
 }
 
+/* Portfolio Card Dedicated Styling: Image-centric agency presentation */
+.portfolio-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(27, 16, 53, 0.16);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+  will-change: transform, box-shadow;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-6px);
+  border-color: #7C3AED;
+  box-shadow: 0 20px 40px -12px rgba(124, 58, 237, 0.22), 0 4px 16px rgba(27, 16, 53, 0.06);
+}
+
 /* Typography Enhancements */
 h1, h2, h3, h4 {
   letter-spacing: -0.025em;
 }
 
-/* Mobile 3x2 Grid Fine-Tuning: Prevent text overflow and ensure uniform heights */
+/* Mobile Grid Fine-Tuning: Prevent text overflow and ensure uniform heights */
 @media (max-width: 640px) {
   .service-card,
-  .about-card,
-  .portfolio-card {
+  .about-card {
     min-height: 100%;
     border-radius: 14px;
     padding: 8px 6px;
